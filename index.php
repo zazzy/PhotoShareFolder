@@ -8,10 +8,10 @@
     <h2>Home</h2>
     <hr>
     <a href="?page=Home">Home</a>
-    <a href="?page=Home">Profile</a>
-    <a href="?page=Home">Gallery</a>
+    <a href="?page=Profile">Profile</a>
+    <a href="?page=Gallery">Gallery</a>
 
-    <a href="?page=signup">Sign Up</a>
+    <a href="?page=SignUp">Sign Up</a>
 
     <p>
         <?php
