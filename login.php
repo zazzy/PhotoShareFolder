@@ -19,8 +19,9 @@ if(isset($_POST['login'])) {
     $id = $row['id'];
     $db_password = $row['password'];
 
-
-    if(md5($password) == $db_password){
+    printf("entered\n",$password);
+    printf("in db\n",$db_password);
+    if($password == $db_password){
         $_SESSION['username']= $username;
         $_SESSION['id'] = $id;
         header("Loaction: index.php");
@@ -28,7 +29,6 @@ if(isset($_POST['login'])) {
         echo $row;
     }else{
         echo "Incorrect detailss\n";
-        echo $row['username'];
         echo $row['password'];
     }
 }
