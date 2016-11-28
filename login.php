@@ -25,9 +25,9 @@ if(isset($_POST['login'])) {
         $_SESSION['id'] = $id;
         header("Loaction: index.php");
         echo "Logged in\n";
-        echo $row;
+        echo $row['username'];
     }else{
-        echo "Incorrect detailss\n";
+        echo "Incorrect details\n";
     }
 }
 ?>
