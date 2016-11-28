@@ -19,11 +19,12 @@ if(isset($_POST['login'])) {
     $id = $row['id'];
     $db_password = $row['password'];
 
-    if($password = $db_password){
+    if($password == $db_password){
         $_SESSION['username']= $username;
         $_SESSION['id'] = $id;
         header("Loaction: index.php");
         echo "Logged in\n";
+        echo $row;
     }else{
         echo "Incorrect details\n";
     }
@@ -47,7 +48,7 @@ if(isset($_POST['login'])) {
 
 <form action="login.php" method="post" enctype="multipart/form-data">
     <input placeholder="Username" name="username" type="text" autofocus>
-    <input placeholder="Password" name="password" type="text" autofocus>
+    <input placeholder="Password" name="password" type="password" autofocus>
     <input name="login" type="submit" autofocus>
 </form>
     <?php
