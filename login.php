@@ -22,7 +22,7 @@ if(isset($_POST['login'])) {
     print(" entered $password ");
     print(" in db $db_password");
     print(" UN $username");
-    if($password == $db_password){
+    if($password == md5($db_password)){
         $_SESSION['username']= $username;
         $_SESSION['id'] = $id;
         header("Loaction: index.php");
