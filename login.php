@@ -1,12 +1,15 @@
 <?php
     session_start();
-if($_POST['login']) {
+if(isset($_POST['login'])) {
     include("./db/connect.php");
     $username = strip_tags($_POST['username']);
     $password = strip_tags($_POST['password']);
 
     $username = stripslashes($username);
     $password = stripcslashes($password);
+
+    $username = mysqli_real_escape_string($db,$username);
+    $password = mysqli_real_escape_string($db,$password);
 
     $password = md5($password);
 
@@ -46,6 +49,11 @@ if($_POST['login']) {
     <input placeholder="Password" name="password" type="text" autofocus>
     <input name="login" type="submit" autofocus>
 </form>
+    <?php
 
+    echo "<a href=''>link</a>";
+
+    ?>
+</p>
 </body>
 </html>
