@@ -23,7 +23,7 @@ if(isset($_POST['login'])) {
     if($password == md5($db_password)){
         $_SESSION['username']= $username;
         $_SESSION['id'] = $id;
-        header("Loaction: index.php");
+        //header("Location: index.php");
         echo "Logged in\n";
         echo $row['username'];
     }else{
