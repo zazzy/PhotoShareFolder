@@ -19,8 +19,9 @@ if(isset($_POST['login'])) {
     $id = $row['id'];
     $db_password = $row['password'];
 
-    printf("entered\n",$password);
-    printf("in db\n",$db_password);
+    printf("entered\n",$password,"\n");
+    printf("in db\n",$db_password,"\n");
+    printf("UN\n",$username,"\n");
     if($password == $db_password){
         $_SESSION['username']= $username;
         $_SESSION['id'] = $id;
