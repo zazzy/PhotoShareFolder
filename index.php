@@ -10,31 +10,56 @@ make dynamic navigation
 -->
 <!DOCTYPE html>
     <html>
-    <head>
-
-    </head>
-    <body>
-    <h2>Home</h2>
+ 
     <div id="Header">
         <ul>
             <?php include('global/header.php');?>
 
         </ul>
     </div>
+    
+    
     <div id="nav">
-        <ul>
+
             <?php include('global/nav.php') ?>
-            <li><a href="?page=gallery">Gallery</a></li>
-        </ul>
+
     </div><!-- NAV -->
 
-
-    <p>
+    
         <?php
 
-        //echo "<a href=''>link</a>";
+        if(isset($_GET['page'])){
+            $page = $_GET['page'];
+        }else{
+            $page = '';
+        }
 
+        switch($page){
+            case "home";
+                include 'home.php';
+                break;
+            case "profile";
+                include 'profile.php';
+                break;
+            case "gallery";
+                include 'gallery.php';
+                break;
+            case "login";
+                include 'login.php';
+                break;
+            case "register";
+                include 'register.php';
+                break;
+            case "about";
+                include 'about.php';
+                break;
+            default:
+                echo "default";
+                break;
+        }
+
+        //echo "<a href=''>link</a>";
+        echo $page;
         ?>
-    </p>
-    </body>
+
 </html>
