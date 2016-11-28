@@ -42,7 +42,7 @@ if(isset($_POST['login'])) {
 
 <a href="?page=SignUp">Sign Up</a>
 
-<p>
+
 
 <form action="login.php" method="post" enctype="multipart/form-data">
     <input placeholder="Username" name="username" type="text" autofocus>
@@ -54,6 +54,6 @@ if(isset($_POST['login'])) {
     echo "<a href=''>link</a>";
 
     ?>
-</p>
+
 </body>
 </html>
