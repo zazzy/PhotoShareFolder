@@ -21,6 +21,12 @@ make dynamic navigation
 
         </ul>
     </div>
+    <div id="nav">
+        <ul>
+            <?php include('global/nav.php') ?>
+            <li><a href="?page=gallery">Gallery</a></li>
+        </ul>
+    </div><!-- NAV -->
 
 
     <p>
