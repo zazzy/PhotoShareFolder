@@ -56,7 +56,7 @@ make dynamic navigation
         }
 
         //echo "<a href=''>link</a>";
-        echo $page;
+        //echo $page;
         ?>
 
 </html>
