@@ -1,4 +1,13 @@
-
+<!--
+getdone:
+-Login php and logout page done, direct to logout to logout
+make dynamic navigation
+-profiles
+-register
+-upload
+-purchase with paypal
+-gallery
+-->
 <!DOCTYPE html>
     <html>
     <head>

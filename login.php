@@ -1,5 +1,5 @@
 <?php
-    session_start();
+
 if(isset($_POST['login'])) {
     include("./db/connect.php");
     $username = strip_tags($_POST['username']);
@@ -23,8 +23,9 @@ if(isset($_POST['login'])) {
         $_SESSION['username']= $username;
         $_SESSION['id'] = $id;
         header("Loaction: index.php");
+        echo "Logged in\n";
     }else{
-        echo "Incorrect details";
+        echo "Incorrect details\n";
     }
 }
 ?>
