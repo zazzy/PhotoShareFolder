@@ -12,7 +12,10 @@
         </div> <!-- Banner -->
 
         <div id="nav">
-            <?php include('./nav.php')?>;
+            <ul>
+            <?php include('./nav.php')?>
+                <li><a href="?page=gallery">Gallery</a></li>
+                </ul>
         </div><!-- NAV -->
 
 

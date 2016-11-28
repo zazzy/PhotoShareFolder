@@ -26,7 +26,7 @@ make dynamic navigation
     <p>
         <?php
 
-        echo "<a href=''>link</a>";
+        //echo "<a href=''>link</a>";
 
         ?>
     </p>
