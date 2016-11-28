@@ -37,26 +37,13 @@ if(isset($_POST['login'])) {
     <title>Login</title>
 </head>
 <body>
-<h2>Login</h2>
-<hr>
-<a href="?page=Home">Home</a>
-<a href="?page=Profile">Profile</a>
-<a href="?page=Gallery">Gallery</a>
-
-<a href="?page=SignUp">Sign Up</a>
-
-
 
 <form action="login.php" method="post" enctype="multipart/form-data">
     <input placeholder="Username" name="username" type="text" autofocus>
     <input placeholder="Password" name="password" type="password" autofocus>
     <input name="login" type="submit" autofocus>
 </form>
-    <?php
 
-    echo "<a href=''>link</a>";
-
-    ?>
 
 </body>
 </html>

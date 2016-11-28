@@ -31,12 +31,5 @@
 
 
 
-    <p>
-        <?php
-
-        echo "<a href=''>link</a>";
-
-        ?>
-</p>
 </body>
 </html>
