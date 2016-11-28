@@ -19,6 +19,7 @@ if(isset($_POST['login'])) {
     $id = $row['id'];
     $db_password = $row['password'];
 
+
     if($password == $db_password){
         $_SESSION['username']= $username;
         $_SESSION['id'] = $id;
@@ -27,6 +28,7 @@ if(isset($_POST['login'])) {
         echo $row;
     }else{
         echo "Incorrect details\n";
+        echo $row;
     }
 }
 ?>
