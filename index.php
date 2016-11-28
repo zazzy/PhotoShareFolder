@@ -2,27 +2,22 @@
 <!DOCTYPE html>
     <html>
     <head>
+
     </head>
     <body>
+    <h2>Home</h2>
+    <hr>
+    <a href="?page=Home">Home</a>
+    <a href="?page=Home">Profile</a>
+    <a href="?page=Home">Gallery</a>
+
+    <a href="?page=signup">Sign Up</a>
+
     <p>
         <?php
-        $myAge = 20;
+
         echo "<a href=''>link</a>";
-        if($myAge > 16){
-            echo "You can have specs m8 <br />";
-        }else{
-            echo"Too young boyo<br />";
-        }
-        if($myAge >18){
-            echo "You can have mugs pal<br />";
-        }else{
-            echo"Too young boyo<br />";
-        }
-        if($myAge > 21) {
-            echo "some shit<br />";
-        }else{
-            echo "Too young boyo<br />";
-        }
+
         ?>
     </p>
     </body>
