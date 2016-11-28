@@ -15,12 +15,13 @@ make dynamic navigation
     </head>
     <body>
     <h2>Home</h2>
-    <hr>
-    <a href="?page=Home">Home</a>
-    <a href="?page=Profile">Profile</a>
-    <a href="?page=Gallery">Gallery</a>
+    <div id="Header">
+        <ul>
+            <?php include('global/header.php');?>
 
-    <a href="?page=SignUp">Sign Up</a>
+        </ul>
+    </div>
+
 
     <p>
         <?php

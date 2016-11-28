@@ -19,9 +19,7 @@ if(isset($_POST['login'])) {
     $id = $row['id'];
     $db_password = $row['password'];
 
-    print(" entered $password ");
-    print(" in db $db_password");
-    print(" UN $username");
+
     if($password == md5($db_password)){
         $_SESSION['username']= $username;
         $_SESSION['id'] = $id;
@@ -30,7 +28,6 @@ if(isset($_POST['login'])) {
         echo $row;
     }else{
         echo "Incorrect detailss\n";
-        echo $row['password'];
     }
 }
 ?>
