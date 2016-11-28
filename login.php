@@ -20,16 +20,16 @@ if(isset($_POST['login'])) {
     $db_password = $row['password'];
 
 
-    if($password == $db_password){
+    if(md5($password) == $db_password){
         $_SESSION['username']= $username;
         $_SESSION['id'] = $id;
         header("Loaction: index.php");
         echo "Logged in\n";
         echo $row;
     }else{
-        echo "Incorrect details\n";
+        echo "Incorrect detailss\n";
         echo $row['username'];
-        echo $row['username'];
+        echo $row['password'];
     }
 }
 ?>
