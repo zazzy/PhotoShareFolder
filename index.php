@@ -35,9 +35,6 @@ make dynamic navigation
         }
 
         switch($page){
-            case "home";
-                include 'home.php';
-                break;
             case "profile";
                 include 'profile.php';
                 break;
