@@ -28,7 +28,8 @@ if(isset($_POST['login'])) {
         echo $row;
     }else{
         echo "Incorrect details\n";
-        echo $row;
+        echo $row['username'];
+        echo $row['username'];
     }
 }
 ?>
