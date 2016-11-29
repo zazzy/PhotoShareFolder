@@ -1,4 +1,4 @@
-<ul>
+<ul class = "nav">
 <li><a href="?page=home">Home</a></li>
 <li><a href="?page=profile">Profile</a></li>
 <li><a href="?page=gallery">Gallery</a></li>
