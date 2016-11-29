@@ -17,14 +17,14 @@ make dynamic navigation
 
         </ul>
     </div>
-    
-    
+
+    <div id ="wrapper">
     <div id="nav">
 
             <?php include('global/nav.php') ?>
 
     </div><!-- NAV -->
-    <div id ="wrapper">
+
     
         <?php
 
