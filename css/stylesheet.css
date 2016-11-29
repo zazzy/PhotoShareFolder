@@ -1,0 +1,15 @@
+body{
+    background-color: black;
+}
+#wrapper{
+    background-color: blue;
+    height: 10%;
+    width: auto;
+
+}
+#banner{
+    float: left;
+    width: 25%;
+    height: 90%;
+
+}
