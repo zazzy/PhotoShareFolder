@@ -24,7 +24,7 @@ make dynamic navigation
             <?php include('global/nav.php') ?>
 
     </div><!-- NAV -->
-
+    <div id ="wrapper">
     
         <?php
 

@@ -11,7 +11,8 @@
             <img src="../img/placeholder.jpg"/>
             </a>
         </div> <!-- Banner -->
-        <div id ="wrapper">
+
+
 
 
 
