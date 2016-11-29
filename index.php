@@ -58,5 +58,5 @@ make dynamic navigation
         //echo "<a href=''>link</a>";
         //echo $page;
         ?>
-
+</div>
 </html>
