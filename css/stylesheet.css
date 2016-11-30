@@ -26,7 +26,11 @@ body{
     float: left;
 }
 
-ul{
+#nav{
+    font-size: 16px;
+
+}
+#nav ul{
     background-color: crimson;
     list-style-type: none;
     margin: 0;
@@ -34,16 +38,16 @@ ul{
     overflow: hidden;
 
 }
-li{
+#nav li{
     float: left;
 }
-li a {
+#nav li a {
     display: block;
     color: aqua;
     padding: 10px;
     text-decoration: none;
     text-align: center;
 }
-li a:hover{
+#nav li a:hover{
     background-color: yellow;
 }
