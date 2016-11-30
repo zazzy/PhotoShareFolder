@@ -11,18 +11,26 @@ if(isset($_POST['usubmit'])&&$_FILES['photoupload']['size']>0) {
     } else {
         echo "VALID FILE";
         include("./db/connect.php");
-        $fileName = $_FILES['photoupload']['name'];
-        $fileSize = $_FILES['photoupload']['size'];
-        $filePrice = $_POST['upload_price'];
-        $fileDescription = $_POST['upload_description'];
-        $filePrice = $_POST['upload_price'];
-        $fileUserID = $_SESSION['id'];
-        $fileTempName = $_FILES['photoupload']['tmp_name'];
+        try {
+            $fileName = $_POST["upload_name"];
+            $fileSize = $_FILES['photoupload']['size'];
+            $filePrice = $_POST['upload_price'];
+            $fileDescription = $_POST['upload_description'];
+            $filePrice = $_POST['upload_price'];
+            $fileUserID = $_SESSION['id'];
+            $fileTempName = $_FILES['photoupload']['tmp_name'];
+        }catch (exception $ee){
+            echo " ERROR AT FILE ASSIGNMENT ".$ee;
+        }
         echo $fileName;
-        $handle = fopen($fileTempName, "r");
-        $toUpload = fread($handle, filesize($fileTempName));
-        $toUpload = addslashes($fileName);
-        fclose($handle);
+        try {
+            $handle = fopen($fileTempName, "r");
+            $toUpload = fread($handle, filesize($fileTempName));
+            $toUpload = addslashes($fileName);
+            fclose($handle);
+            }catch (exception $e){
+            echo "$e";
+        }
 
         $query = "insert into image(user_id,file_name,Description,price,imageblob)" .
             "values('$fileUserID','$fileName','$fileDescription','$filePrice','$toUpload')";
