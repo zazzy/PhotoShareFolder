@@ -28,6 +28,8 @@ body{
 
 #nav{
     font-size: 16px;
+    float: right;
+    width: 100%;
 
 }
 #nav ul{
@@ -36,7 +38,9 @@ body{
     margin: 0;
     padding: 0;
     overflow: hidden;
-
+    display: flex;
+    justify-content: space-around;
+    font-size: 130%;
 }
 #nav li{
     float: left;
