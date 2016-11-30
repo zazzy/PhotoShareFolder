@@ -25,7 +25,7 @@ make dynamic navigation
 
         <!-- </div>NAV -->
 
-    
+        <div id = "content">
         <?php
 
         if(isset($_GET['page'])){
@@ -51,6 +51,7 @@ make dynamic navigation
                 include 'about.php';
                 break;
             default:
+                include 'home.php';
                 echo "default";
                 break;
         }
@@ -58,5 +59,6 @@ make dynamic navigation
         //echo "<a href=''>link</a>";
         //echo $page;
         ?>
+            </div>
 </div>
 </html>

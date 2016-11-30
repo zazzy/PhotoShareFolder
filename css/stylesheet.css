@@ -77,3 +77,10 @@ background-color: #E9F1F7;
 #nav li a .active{
     background-color: #E9F1F7
 }
+
+#content{
+    background-color: green;
+    width: 90%;
+    height: auto;
+    margin: auto;
+}
