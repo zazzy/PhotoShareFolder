@@ -54,8 +54,13 @@ justify-content: space-around;
 font-size: 131%;
 }
 #nav li{
-float: left;
-margin: auto;
+    float: left;
+    margin: auto;
+}
+#nav li:hover {
+    float: left;
+    margin: auto;
+    background-color: #E9F1F7;
 }
 #nav li a {
 display: block;
@@ -63,9 +68,9 @@ color: #2274A5;
 text-decoration: none;
 text-align: center;
 }
-#nav li :hover{
+#nav li a:hover{
 background-color: #E9F1F7;
 }
 #nav li a .active{
-    background-color: #777c80
+    background-color: #E9F1F7
 }
