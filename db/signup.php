@@ -31,8 +31,14 @@ session_start();
             if(!$query){
                 printf("DEAD1: %s\n", mysqli_error($db));
             }else{
+                $sql = "select * from user WHERE name='$username' LIMIT 1";
+                $query = mysqli_query($db,$sql);
+                $row = mysqli_fetch_array($query);
+                $id = $row['id'];
+                $db_password = $row['password'];
                 print "Data inserted correctly";
                 $_SESSION['username']=$username;
+                $_SESSION['id'] = $id;
             }
         }
     }
