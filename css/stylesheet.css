@@ -1,11 +1,11 @@
 body{
-    background-color: green;
+    background-color: rgba(18, 18, 18, 1);
     margin: 0;
     padding: 0;
 
 }
 #wrapper{
-    background-color: blue;
+    background-color: rgba(18, 18, 18, 1);
     height: 1000px;
     width: 100%;
     margin-left: auto;
@@ -17,6 +17,9 @@ body{
     max-height: 90%;
     min-height: 100px;
     min-width: 100%;
+    margin-left: -10%;
+    border: 0;
+    margin-right: 10%;
 }
 #banner img{
     max-width: 100%;
@@ -27,6 +30,8 @@ body{
 }
 
 #nav{
+    background-color: rgb(8, 8, 8);
+    border-bottom: 2px #4d4dff;
     font-size: 16px;
     float: right;
     width: 100%;
@@ -44,6 +49,7 @@ body{
 }
 #nav li{
     float: left;
+    margin: auto;
 }
 #nav li a {
     display: block;
