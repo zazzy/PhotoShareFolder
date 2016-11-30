@@ -3,7 +3,9 @@
 <head><title>PhotoShare - Profile</title></head>
 <body>
 <div id ="profile_details">
-
+Test
+    TEst
+    TEst
 
 </div>
 <section id ="photo_view">
