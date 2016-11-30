@@ -40,7 +40,7 @@ if(isset($_POST['login'])) {
 <body>
 
 
-<form action="login.php" method="post" enctype="multipart/form-data">
+<form action="" method="post" enctype="multipart/form-data">
     <input placeholder="Username" name="username" type="text" autofocus>
     <input placeholder="Password" name="password" type="password" autofocus>
     <input name="login" type="submit" autofocus>
