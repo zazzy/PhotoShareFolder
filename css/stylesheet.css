@@ -56,6 +56,8 @@ font-size: 131%;
 #nav li{
     float: left;
     margin: auto;
+    padding-right: 4%;
+    padding-left: 4%;
 }
 #nav li:hover {
     float: left;
