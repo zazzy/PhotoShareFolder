@@ -1,5 +1,6 @@
 <?php
-//session_start();
+session_set_cookie_params(86400);
+session_start();
 //if(isset($_POST['submit'])) {
     include("./connect.php");
 
@@ -28,9 +29,10 @@
             values ('$username','$password')";
             $query=mysqli_query($db,$sql);
             if(!$query){
-                printf("DEAD: %s\n", mysqli_error($db));
+                printf("DEAD1: %s\n", mysqli_error($db));
             }else{
                 print "Data inserted correctly";
+                $_SESSION['username']=$username;
             }
         }
     }
