@@ -87,9 +87,11 @@ session_start()
 <?php
 if(isset($_POST['upload'])&&$_FILES['photoupload']['size']>0) {
     $allowed_extension = array("image/png", "image/jpg");
+    echo "FIRST IF PASS";
     if (!in_array($_FILES['photoupload']['type'], $allowed_extension)) {
         echo "Invalid file type, JPG or PNG only" . $_FILES['photoupload']['type'];
     } else {
+        echo "VALID FILE";
         include("./db/connect.php");
         $fileName = $_FILES['photoupload']['name'];
         $fileSize = $_FILES['photoupload']['size'];
@@ -111,5 +113,7 @@ if(isset($_POST['upload'])&&$_FILES['photoupload']['size']>0) {
 
     }
 
+}else{
+    echo "FIRST IF FAIL";
 }
 ?>
