@@ -3,7 +3,7 @@
 <head><title>PhotoShare - Profile</title></head>
 <body>
 <div id ="profile_details">
-    <h3><?php$_SESSION['username']?></h3>
+    <h3>name</h3>
 
 </div>
 <section id ="photo_view">
