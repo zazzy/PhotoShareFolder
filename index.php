@@ -19,7 +19,7 @@ make dynamic navigation
     </div>
 
     <div id ="wrapper">
-    <div id="nav">
+    <!--<div id="nav">
 
             <?php include('global/nav.php') ?>
 
