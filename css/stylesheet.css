@@ -49,14 +49,15 @@ list-style-type: none;
 overflow: hidden;
 display: flex;
 justify-content: space-around;
-    padding-top: 5px;
-    padding-bottom: 5px;
+
 font-size: 131%;
 }
 #nav li{
     float: left;
     margin: auto;
     padding-right: 4%;
+    padding-top: 5px;
+    padding-bottom: 5px;
     padding-left: 4%;
 }
 #nav li:hover {
