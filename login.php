@@ -1,5 +1,6 @@
-<?php
 
+<?php
+session_start();
 if(isset($_POST['login'])) {
     include("./db/connect.php");
     $username = strip_tags($_POST['username']);
