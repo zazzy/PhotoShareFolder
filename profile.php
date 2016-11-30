@@ -6,7 +6,7 @@ session_start()
 <head><title>PhotoShare - Profile</title></head>
 <body>
 <div id ="profile_details">
-    <h3><?php echo $_SESSION['username'] ?></h3>
+    <h3></h3>
 
 </div>
 <section id ="photo_view">
