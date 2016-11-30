@@ -6,7 +6,7 @@
     </head>
     <body>
 
-    <form name=registerForm" action="./db/signup.php" method="POST">
+    <form name="registerForm" action="" method="POST">
     <table>
 
             <tr>

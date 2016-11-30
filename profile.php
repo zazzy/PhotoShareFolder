@@ -12,6 +12,24 @@ session_start()
             echo "Username";
         }
         ?></h3>
+    <div id="upload"
+    <form name="uploadform" action="" method="POST">
+        <table>
+            <tr>
+                <td>Upload Name</td>
+                <td><input type = "text" name ="upload_name"/></td>
+            </tr>
+            <tr>
+                <td>Price</td>
+                <td><input type = "number" name ="upload_price"/></td>
+            </tr>
+
+            <tr>
+                <td><input type = "submit" name ="upload_submit" value="Post"/></td>
+            </tr>
+        </table>
+    </form>
+    </div>
 
 </div>
 <section id ="photo_view">
