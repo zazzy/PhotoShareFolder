@@ -85,7 +85,7 @@ session_start()
 </html>
 
 <?php
-if(isset($_POST['upload'])&&$_FILES['photoupload']['size']>0) {
+if(isset($_POST['upload_submit'])&&$_FILES['photoupload']['size']>0) {
     $allowed_extension = array("image/png", "image/jpg");
     echo "FIRST IF PASS";
     if (!in_array($_FILES['photoupload']['type'], $allowed_extension)) {
