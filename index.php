@@ -50,6 +50,9 @@ make dynamic navigation
             case "about";
                 include 'about.php';
                 break;
+            case "logout";
+                include 'logout.php';
+                break;
             default:
                 include 'home.php';
                 echo "default";

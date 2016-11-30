@@ -79,7 +79,7 @@ background-color: #E9F1F7;
 }
 
 #content{
-    background-color: green;
+    /*background-color: green; this was just for visibility kfl */
     width: 90%;
     float: right;
     height: auto;
@@ -88,6 +88,7 @@ background-color: #E9F1F7;
     margin-right: 5%;
     min-height: 100px;
     padding-top: 1%;
+    color: #1D74A5 ;
 }
 .active{
     background-color: #E9F1F7;
