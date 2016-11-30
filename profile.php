@@ -6,7 +6,12 @@ session_start()
 <head><title>PhotoShare - Profile</title></head>
 <body>
 <div id ="profile_details">
-    <h3></h3>
+    <h3><?php if(isset($_SESSION['username'])){
+            echo $_SESSION['username'];
+        }else {
+            echo "Username";
+        }
+        ?></h3>
 
 </div>
 <section id ="photo_view">
