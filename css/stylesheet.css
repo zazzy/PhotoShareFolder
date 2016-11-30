@@ -13,35 +13,36 @@ body{
 
 }
 #banner{
+    background-color: rgb(8, 8, 8);
     float: left;
-    max-height: 90%;
-    min-height: 100px;
+    max-height: 50px;
+    min-height: 10px;
     min-width: 100%;
     margin-left: -10%;
     border: 0;
     margin-right: 10%;
 }
 #banner img{
-    max-width: 100%;
-    max-height: 100%;
-    min-width: 25%;
+    max-width: 20%;
+    max-height: 10%;
+    min-width: 5%;
     margin: auto;
     float: left;
 }
 
 #nav{
-    background-color: rgb(8, 8, 8);
-    border-bottom: 2px #4d4dff;
+
     font-size: 16px;
     float: right;
     width: 100%;
 
 }
 #nav ul{
-    background-color: crimson;
+    box-shadow: 1px 1px 1px blue;
+    background-color: rgb(8, 8, 8);
     list-style-type: none;
+    padding-bottom: 10px;
     margin: 0;
-    padding: 0;
     overflow: hidden;
     display: flex;
     justify-content: space-around;
@@ -53,11 +54,11 @@ body{
 }
 #nav li a {
     display: block;
-    color: aqua;
+    color: #2274A5;
     padding: 10px;
     text-decoration: none;
     text-align: center;
 }
 #nav li a:hover{
-    background-color: yellow;
+    background-color: #E9F1F7;
 }
