@@ -86,6 +86,11 @@ background-color: #E9F1F7;
     margin-left:auto;
     margin-right: auto;
 }
-li:active{
+.active{
     background-color: #E9F1F7;
+}
+#full_spacer{
+    width:100%;
+    background-color: white;
+    height: 10px;
 }

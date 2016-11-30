@@ -1,12 +1,15 @@
 
 <div id="nav">
 <ul>
-<li class ="active"><a href="?page=home">Home</a></li>
-<li class ="active"><a href="?page=profile">Profile</a></li>
-<li class ="active"><a href="?page=gallery">Gallery</a></li>
-<li class ="active"><a href="?page=login">Login</a></li>
-<li class ="active"><a href="?page=register">Register</a></li>
-<li class ="active"><a href="?page=about">About</a></li>
+<li><a href="?page=home">Home</a></li>
+<li><a href="?page=profile">Profile</a></li>
+<li><a href="?page=gallery">Gallery</a></li>
+<li><a href="?page=login">Login</a></li>
+<li><a href="?page=register">Register</a></li>
+<li><a href="?page=about">About</a></li>
 </ul>
+</div>
+<div id ="full_spacer">
+
 </div>
 <div id = "content">
