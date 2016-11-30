@@ -22,7 +22,7 @@ body{
     margin-left: -10%;
     border: 0;
     padding-left: 10%;
-    /* margin-right: 10%;*/
+    padding-bottom: 1px;
 }
 #banner img{
 max-width: 20%;
@@ -65,5 +65,7 @@ text-align: center;
 }
 #nav li a:hover{
 background-color: #E9F1F7;
-    padding: inherit;
+}
+#nav li a .active{
+    background-color: #777c80
 }
