@@ -85,31 +85,31 @@ session_start()
 </html>
 
 <?php
-if(isset($_POST['upload'])&&$_FILES['photoupload']['size']>0)
-    $allowed_extension = array("image/png","image/jpg");
-    if(!in_array($_FILES['photoupload']['type'],$allowed_extension)){
-        echo "Invalid file type, JPG or PNG only". $_FILES['photoupload']['type'];
-    }else{
+if(isset($_POST['upload'])&&$_FILES['photoupload']['size']>0) {
+    $allowed_extension = array("image/png", "image/jpg");
+    if (!in_array($_FILES['photoupload']['type'], $allowed_extension)) {
+        echo "Invalid file type, JPG or PNG only" . $_FILES['photoupload']['type'];
+    } else {
         include("./db/connect.php");
-        $fileName=$_FILES['photoupload']['name'];
-        $fileSize=$_FILES['photoupload']['size'];
-        $filePrice= $_POST['upload_price'];
-        $fileDescription= $_POST['upload_description'];
-        $filePrice= $_POST['upload_price'];
+        $fileName = $_FILES['photoupload']['name'];
+        $fileSize = $_FILES['photoupload']['size'];
+        $filePrice = $_POST['upload_price'];
+        $fileDescription = $_POST['upload_description'];
+        $filePrice = $_POST['upload_price'];
         $fileUserID = $_SESSION['id'];
         $fileTempName = $_FILES['photoupload']['tmp_name'];
 
-        $handle = fopen($fileTempName,"r");
-        $toUpload = fread($handle,filesize($fileTempName));
+        $handle = fopen($fileTempName, "r");
+        $toUpload = fread($handle, filesize($fileTempName));
         $toUpload = addslashes($fileName);
         fclose($handle);
 
-        $query= "insert into image(user_id,file_name,Description,price,imageblob)".
+        $query = "insert into image(user_id,file_name,Description,price,imageblob)" .
             "values('$fileUserID','$fileName','$fileDescription','$filePrice','$toUpload')";
         mysqli_query($query) or die("FUCKK");
         echo "$fileName hopefully uploaded";
 
     }
 
-
+}
 ?>
