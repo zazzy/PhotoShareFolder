@@ -1,9 +1,41 @@
 <?php
 session_start();
 
-if(isset($_POST['upload_submit'])){
+if(isset($_POST['usubmit'])){
     print "WOT";
 
+}
+
+if(isset($_POST['usubmit'])/*&&$_FILES['photoupload']['size']>0*/) {
+    $allowed_extension = array("image/png", "image/jpg");
+    echo "FIRST IF PASS";
+    if (!in_array($_FILES['photoupload']['type'], $allowed_extension)) {
+        echo "Invalid file type, JPG or PNG only" . $_FILES['photoupload']['type'];
+    } else {
+        echo "VALID FILE";
+        include("./db/connect.php");
+        $fileName = $_FILES['photoupload']['name'];
+        $fileSize = $_FILES['photoupload']['size'];
+        $filePrice = $_POST['upload_price'];
+        $fileDescription = $_POST['upload_description'];
+        $filePrice = $_POST['upload_price'];
+        $fileUserID = $_SESSION['id'];
+        $fileTempName = $_FILES['photoupload']['tmp_name'];
+
+        $handle = fopen($fileTempName, "r");
+        $toUpload = fread($handle, filesize($fileTempName));
+        $toUpload = addslashes($fileName);
+        fclose($handle);
+
+        $query = "insert into image(user_id,file_name,Description,price,imageblob)" .
+            "values('$fileUserID','$fileName','$fileDescription','$filePrice','$toUpload')";
+        mysqli_query($query) or die("FUCKK");
+        echo "$fileName hopefully uploaded";
+
+    }
+
+}else{
+    echo "FIRST IF FAIL";
 }
 ?>
 <!DOCTYPE html>
@@ -17,7 +49,7 @@ if(isset($_POST['upload_submit'])){
             echo "Username";
         }
         ?></h3>
-    <div id="upload"
+    <div id="upload">
     <form name="uploadform" action="" method="POST" enctype="multipart/form-data">
         <table>
             <tr>
@@ -39,7 +71,7 @@ if(isset($_POST['upload_submit'])){
             </tr>
 
             <tr>
-                <td><input type = "submit" name ="upload_submit" value="Post""/></td>
+                <td><input type = "submit" name ="usubmit" value="Upload""/></td>
             </tr>
         </table>
     </form>
@@ -90,35 +122,5 @@ if(isset($_POST['upload_submit'])){
 </html>
 
 <?php
-if(isset($_POST['upload_submit'])/*&&$_FILES['photoupload']['size']>0*/) {
-    $allowed_extension = array("image/png", "image/jpg");
-    echo "FIRST IF PASS";
-    if (!in_array($_FILES['photoupload']['type'], $allowed_extension)) {
-        echo "Invalid file type, JPG or PNG only" . $_FILES['photoupload']['type'];
-    } else {
-        echo "VALID FILE";
-        include("./db/connect.php");
-        $fileName = $_FILES['photoupload']['name'];
-        $fileSize = $_FILES['photoupload']['size'];
-        $filePrice = $_POST['upload_price'];
-        $fileDescription = $_POST['upload_description'];
-        $filePrice = $_POST['upload_price'];
-        $fileUserID = $_SESSION['id'];
-        $fileTempName = $_FILES['photoupload']['tmp_name'];
 
-        $handle = fopen($fileTempName, "r");
-        $toUpload = fread($handle, filesize($fileTempName));
-        $toUpload = addslashes($fileName);
-        fclose($handle);
-
-        $query = "insert into image(user_id,file_name,Description,price,imageblob)" .
-            "values('$fileUserID','$fileName','$fileDescription','$filePrice','$toUpload')";
-        mysqli_query($query) or die("FUCKK");
-        echo "$fileName hopefully uploaded";
-
-    }
-
-}else{
-    echo "FIRST IF FAIL";
-}
 ?>
