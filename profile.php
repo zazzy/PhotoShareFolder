@@ -18,7 +18,7 @@ if(isset($_POST['usubmit'])&&$_FILES['photoupload']['size']>0) {
         $filePrice = $_POST['upload_price'];
         $fileUserID = $_SESSION['id'];
         $fileTempName = $_FILES['photoupload']['tmp_name'];
-
+        echo $fileName;
         $handle = fopen($fileTempName, "r");
         $toUpload = fread($handle, filesize($fileTempName));
         $toUpload = addslashes($fileName);
@@ -26,8 +26,8 @@ if(isset($_POST['usubmit'])&&$_FILES['photoupload']['size']>0) {
 
         $query = "insert into image(user_id,file_name,Description,price,imageblob)" .
             "values('$fileUserID','$fileName','$fileDescription','$filePrice','$toUpload')";
-        mysqli_query($query) or die("FUCKK");
-        echo "$fileName hopefully uploaded";
+        mysql_query($query) or die("FUCKK");
+        echo "?????";
 
     }
 
