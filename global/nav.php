@@ -9,3 +9,4 @@
 <li><a href="?page=about">About</a></li>
 </ul>
 </div>
+<div id = "content">
