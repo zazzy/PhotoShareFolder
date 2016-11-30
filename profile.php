@@ -1,5 +1,10 @@
 <?php
-session_start()
+session_start();
+
+if(isset($_POST['upload_submit'])){
+    print "WOT";
+
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -34,7 +39,7 @@ session_start()
             </tr>
 
             <tr>
-                <td><input type = "submit" name ="upload_submit" value="Post" id = "upload"/></td>
+                <td><input type = "submit" name ="upload_submit" value="Post""/></td>
             </tr>
         </table>
     </form>
@@ -85,7 +90,7 @@ session_start()
 </html>
 
 <?php
-if(isset($_POST['upload_submit'])&&$_FILES['photoupload']['size']>0) {
+if(isset($_POST['upload_submit'])/*&&$_FILES['photoupload']['size']>0*/) {
     $allowed_extension = array("image/png", "image/jpg");
     echo "FIRST IF PASS";
     if (!in_array($_FILES['photoupload']['type'], $allowed_extension)) {
