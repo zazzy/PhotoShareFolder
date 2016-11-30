@@ -5,7 +5,7 @@
         <title>Register</title>
     </head>
     <body>
-    <div id ="wrapper">
+
     <form name=registerForm" action="./db/signup.php" method="POST">
     <table>
 

@@ -37,7 +37,7 @@ if(isset($_POST['login'])) {
     <title>Login</title>
 </head>
 <body>
-<div id ="wrapper">
+
 
 <form action="login.php" method="post" enctype="multipart/form-data">
     <input placeholder="Username" name="username" type="text" autofocus>
