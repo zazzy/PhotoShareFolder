@@ -7,7 +7,7 @@ session_start()
 <body>
 <div id ="profile_details">
     <h3><?php if(isset($_SESSION['username'])){
-            echo $_SESSION['username'].'\'s Gallery';
+            echo ucfirst(strtolower($_SESSION['username'])).'\'s Gallery';
         }else {
             echo "Username";
         }
