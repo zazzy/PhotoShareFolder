@@ -31,10 +31,13 @@ if(isset($_POST['usubmit'])&&$_FILES['photoupload']['size']>0) {
             }catch (exception $e){
             echo "$e";
         }
-
-        $query = "insert into image(user_id,file_name,Description,price,imageblob)" .
-            "values('$fileUserID','$fileName','$fileDescription','$filePrice','$toUpload')";
-        mysql_query($query) or die("FUCKK");
+        try {
+            $query = "insert into image(user_id,file_name,Description,price,imageblob)" .
+                "values('$fileUserID','$fileName','$fileDescription','$filePrice','$toUpload')";
+            mysql_query($query);
+        }catch (exception $eee){
+            echo $eee;
+        }
         echo "?????";
 
     }
