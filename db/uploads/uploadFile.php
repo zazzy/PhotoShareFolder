@@ -13,7 +13,7 @@ if(isset($_POST['usubmit'])&&$_FILES['photoupload']['size']>0) {
 
 
 
-            $folder = "uploads/";
+            $folder = "img/";
 
             $fileName = $_POST["upload_name"];
             $fileSize = $_FILES['photoupload']['size'];
@@ -23,13 +23,13 @@ if(isset($_POST['usubmit'])&&$_FILES['photoupload']['size']>0) {
             $fileUserID = $_SESSION['id'];
             $fileTempName = $_FILES['photoupload']['tmp_name'];
 
-            $upload_image = basename($_FILES['photoupload']["name"]);
+            $upload_image = $folder.basename($_FILES['photoupload']["name"]);
             /* try to move file PLEASSSEEE WORK */
             if(move_uploaded_file($fileTempName,$upload_image)) {
                 echo "File uploaded";
 
                 $query = "insert into image(user_id,file_name,Description,price,imgurl)" .
-                    "values('$fileUserID','$fileName','$fileDescription','$filePrice','D:/home/site/wwwroot/uploads/$upload_image')";
+                    "values('$fileUserID','$fileName','$fileDescription','$filePrice','$upload_image')";
 
                 $handle = new PDO($dsn,"b7716a5fb7c215","2471e43b096d840");
                 $handle->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
