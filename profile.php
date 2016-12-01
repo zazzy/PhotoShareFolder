@@ -47,7 +47,6 @@ include("./db/uploads/uploadFile.php");
 
 </div>
 <section id ="photo_view">
-    <img src="./img/img1.jpg"/>
     <?php
     include("./db/connect.php");
 
@@ -61,8 +60,6 @@ include("./db/uploads/uploadFile.php");
     echo "<img src=./".$image.">";
     }
 ?>
-
-    <img src="./img/placeholder2.jpg"/>
 
 
 </section>
