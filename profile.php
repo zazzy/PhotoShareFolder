@@ -58,7 +58,7 @@ include("./db/uploads/uploadFile.php");
 
     while($row = $handler->fetch(PDO::FETCH_ASSOC)){
     $image=$row['imgurl'];
-    echo "<img src=./".$image."/>";
+    echo "<img src=./".$image.">";
     }
 ?>
 
