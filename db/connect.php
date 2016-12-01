@@ -13,6 +13,8 @@ $db = new mysqli(
     "ps1418132"  //db name
 );
 
+$dsn = 'mysql:dbname=ps1418132;host=us-cdbr-azure-southcentral-f.cloudapp.net';
+
 if (mysqli_ping($db)) {
     /*printf ("LIVE\n");*/
 } else {

@@ -30,7 +30,7 @@ if(isset($_POST['usubmit'])&&$_FILES['photoupload']['size']>0) {
                 $query = "insert into image(user_id,file_name,Description,price,imgurl)" .
                     "values('$fileUserID','$fileName','$fileDescription','$filePrice','$upload_image')";
 
-                $handle = new PDO($db,"b7716a5fb7c215","2471e43b096d840");
+                $handle = new PDO($dsn,"b7716a5fb7c215","2471e43b096d840");
                 $handle->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
                 $insert = $handle->prepare($query);
                 $insert->execute();
