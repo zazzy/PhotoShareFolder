@@ -22,13 +22,13 @@ if(isset($_POST['usubmit'])&&$_FILES['photoupload']['size']>0) {
             $fileUserID = $_SESSION['id'];
             $fileTempName = $_FILES['photoupload']['tmp_name'];
 
-            $upload_image = $folder.basename($fileName);
+
             /* try to move file PLEASSSEEE WORK */
             if(move_uploaded_file($fileTempName,$fileName)) {
                 echo "File uploaded";
 
                 $query = "insert into image(user_id,file_name,Description,price,imgurl)" .
-                    "values('$fileUserID','$fileName','$fileDescription','$filePrice','$upload_image')";
+                    "values('$fileUserID','$fileName','$fileDescription','$filePrice','$fileName')";
 
                 $handle = new PDO($db,"b7716a5fb7c215","2471e43b096d840");
                 $handle->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
