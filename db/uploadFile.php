@@ -12,7 +12,7 @@ if(isset($_POST['usubmit'])&&$_FILES['photoupload']['size']>0) {
         echo "VALID FILE";
 
 
-            $folder = "./uploads/";
+            $folder = "uploads/";
 
             $fileName = $_POST["upload_name"];
             $fileSize = $_FILES['photoupload']['size'];
