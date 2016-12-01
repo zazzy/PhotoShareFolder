@@ -7,7 +7,7 @@ if(isset($_POST['login'])) {
     include("./db/connect.php");
     $salt = "1238ImTheBoy23o";
     $username = strip_tags($_POST['username']);
-    $password = strip_tags($_POST['password']);
+    $password = strip_tags($_POST['password'].$salt);
 
     $username = stripslashes($username);
     $password = stripcslashes($password);
@@ -15,7 +15,7 @@ if(isset($_POST['login'])) {
     $username = mysqli_real_escape_string($db,$username);
     $password = mysqli_real_escape_string($db,$password);
 
-    $password = md5($password.$salt);
+    $password = md5($password);
 
     $sql = "select * from user WHERE name='$username' LIMIT 1";
     $query = mysqli_query($db,$sql);
