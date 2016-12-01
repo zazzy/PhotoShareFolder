@@ -44,12 +44,12 @@ if(isset($_POST['usubmit'])&&$_FILES['photoupload']['size']>0) {
                 echo "File uploaded";
                 /*mysql_query($query);*/
 
-            }else{echo " upload error ????? ";}
+            }
 
     }
 
 }else{
-    echo "no click :) ";
+
 }
 
 

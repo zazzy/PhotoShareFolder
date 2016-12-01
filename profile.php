@@ -15,9 +15,9 @@ include("./db/uploads/uploadFile.php");
             echo "Username";
         }
         ?></h3>
-    <div id="upload">
+    <div id="upload_form_div">
     <form name="uploadform" action="" method="POST" enctype="multipart/form-data">
-        <table>
+        <table id ="upload_table">
             <tr>
                 <td>Upload Name</td>
                 <td><input type = "text" name ="upload_name"/></td>
@@ -46,42 +46,22 @@ include("./db/uploads/uploadFile.php");
 </div>
 <section id ="photo_view">
     <img src="./img/img1.jpg"/>
-    <img src="./img/img2.jpg"/>
-    <img src="./img/img1.jpg"/>
-    <img src="./img/img3.jpg"/>
-    <img src="./img/img2.jpg"/>
-    <img src="./img/img3.jpg"/>
-    <img src="./img/img3.jpg"/>
-    <img src="./img/img2.jpg"/>
-    <img src="./img/img1.jpg"/>
-    <img src="./img/img2.jpg"/>
-    <img src="./img/img2.jpg"/>
-    <img src="./img/img3.jpg"/>
-    <img src="./img/img1.jpg"/>
-    <img src="./img/img2.jpg"/>
-    <img src="./img/img2.jpg"/>
-    <img src="./img/img3.jpg"/>
-    <img src="./img/img1.jpg"/>
-    <img src="./img/img2.jpg"/>
-    <img src="./img/img3.jpg"/>
-    <img src="./img/img3.jpg"/>
-    <img src="./img/img2.jpg"/>
-    <img src="./img/img1.jpg"/>
-    <img src="./img/img2.jpg"/>
-    <img src="./img/img2.jpg"/>
-    <img src="./img/img3.jpg"/>
-    <img src="./img/img1.jpg"/>
-    <img src="./img/img2.jpg"/>
-    <img src="./img/img1.jpg"/>
-    <img src="./img/img3.jpg"/>
-    <img src="./img/img2.jpg"/>
-    <img src="./img/img3.jpg"/>
-    <img src="./img/img3.jpg"/>
-    <img src="./img/img2.jpg"/>
-    <img src="./img/img1.jpg"/>
-    <img src="./img/img2.jpg"/>
-    <img src="./img/img2.jpg"/>
-    <img src="./img/img3.jpg"/>
+    <?php
+    include("../db/connect.php");
+
+    $handle = new PDO($dsn,"b7716a5fb7c215","2471e43b096d840");
+    $sthandler = $handle->prepare("select * from image where user_id =".$_SESSION['id']);
+
+    $sthandler->execute();
+
+    while($row = $sthandler->fetch(PDO::FETCH_ASSOC)){
+    $image=$row['imgurl'];
+    echo "<img src=".$image."/>";
+    }
+?>
+
+
+
 
 </section>
 </body>

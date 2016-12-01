@@ -114,6 +114,13 @@ background-color: #E9F1F7;
     width: 100% !important;
     height: auto !important;
 }
+#upload_form_div{
+    margin-bottom: 1%;
+}
+#upload_table{
+    border-style: ridge;
+    border-color: #777c80;
+}
 
 
 
