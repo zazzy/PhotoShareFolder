@@ -49,8 +49,8 @@ include("./db/uploads/uploadFile.php");
     <?php
     include("./db/connect.php");
 
-    $handle = new PDO($dsn,"b7716a5fb7c215","2471e43b096d840");
-    $sthandler = $handle->prepare("select * from image where user_id =".$_SESSION['id']);
+    $PDO = new PDO($dsn,"b7716a5fb7c215","2471e43b096d840");
+    $sthandler = $PDO->prepare("select * from image where user_id =".$_SESSION['id']);
 
     $sthandler->execute();
 

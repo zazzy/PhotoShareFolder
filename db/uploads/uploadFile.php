@@ -10,7 +10,8 @@ if(isset($_POST['usubmit'])&&$_FILES['photoupload']['size']>0) {
         echo "Invalid file type, JPG or PNG only " . $_FILES['photoupload']['type'];
     } else {
         echo "VALID FILE";
-            define('DOCROOT',$_SERVER['DOCUMENT_ROOT'].'Z:/PhotoShareFolder/PhotoShareFolder');
+
+
 
             $folder = "uploads/";
 
@@ -28,7 +29,7 @@ if(isset($_POST['usubmit'])&&$_FILES['photoupload']['size']>0) {
                 echo "File uploaded";
 
                 $query = "insert into image(user_id,file_name,Description,price,imgurl)" .
-                    "values('$fileUserID','$fileName','$fileDescription','$filePrice','$upload_image')";
+                    "values('$fileUserID','$fileName','$fileDescription','$filePrice','/db/uploads/.$upload_image')";
 
                 $handle = new PDO($dsn,"b7716a5fb7c215","2471e43b096d840");
                 $handle->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
