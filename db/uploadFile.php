@@ -24,7 +24,7 @@ if(isset($_POST['usubmit'])&&$_FILES['photoupload']['size']>0) {
 
             $upload_image = $folder.basename($fileName);
             /* try to move file PLEASSSEEE WORK */
-            if(move_uploaded_file($fileTempName,$upload_image)) {
+            if(move_uploaded_file($fileTempName,$folder.$fileName)) {
                 echo "File uploaded";
 
                 $query = "insert into image(user_id,file_name,Description,price,imgurl)" .
