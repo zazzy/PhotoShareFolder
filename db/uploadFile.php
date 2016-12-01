@@ -10,7 +10,7 @@ if(isset($_POST['usubmit'])&&$_FILES['photoupload']['size']>0) {
         echo "Invalid file type, JPG or PNG only " . $_FILES['photoupload']['type'];
     } else {
         echo "VALID FILE";
-
+            define('DOCROOT',$_SERVER['DOCUMENT_ROOT'].'Z:/PhotoShareFolder/PhotoShareFolder');
 
             $folder = "uploads/";
 
