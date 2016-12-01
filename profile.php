@@ -2,7 +2,7 @@
 session_start();
 /* fucked fix me lol */
 include("./db/connect.php");
-include("./db/uploadFile.php");
+include("./db/uploads/uploadFile.php");
 ?>
 <!DOCTYPE html>
 <html>
