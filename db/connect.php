@@ -14,7 +14,7 @@ $db = new mysqli(
 );
 
 if (mysqli_ping($db)) {
-    printf ("LIVE\n");
+    /*printf ("LIVE\n");*/
 } else {
     printf ("DEAD: %s\n", mysqli_error($db));
 }
