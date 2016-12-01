@@ -16,10 +16,12 @@ session_start();
     <body>
 
     <?php
+    $salt = "1238ImTheBoy23o";
+
     if(isset($_POST['submit'])) {
         $username =$_POST['username'];
-        $password =$_POST['password'];
-        $confirmpassword =$_POST['confirm_password'];
+        $password =md5($_POST['password'].$salt);
+        $confirmpassword =md5($_POST['confirm_password'].$salt);
         if(empty($username)||empty($password)||empty($confirmpassword)) {
             echo "Empty Field!";
         }elseif ($password!=$confirmpassword){
