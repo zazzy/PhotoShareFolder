@@ -5,7 +5,7 @@ session_start();
 
 if(isset($_POST['login'])) {
     include("./db/connect.php");
-    $salt = "1238ImTheBoy23o"
+    $salt = "1238ImTheBoy23o";
     $username = strip_tags($_POST['username']);
     $password = strip_tags($_POST['password']);
 
