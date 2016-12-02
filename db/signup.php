@@ -41,6 +41,7 @@ session_start();
                 print "Data inserted correctly";
                 $_SESSION['username']=$username;
                 $_SESSION['id'] = $id;
+                $_SESSION['role']= $row['role'];
             }
         }
     }

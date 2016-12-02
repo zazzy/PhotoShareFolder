@@ -21,12 +21,14 @@ if(isset($_POST['login'])) {
     $query = mysqli_query($db,$sql);
     $row = mysqli_fetch_array($query);
     $id = $row['id'];
+    $role = $row['role'];
     $db_password = $row['password'];
 
 
     if($password == $db_password){
         $_SESSION['username']= $username;
         $_SESSION['id'] = $id;
+        $_SESSION['role']= $role;
         //header("Location: index.php");
         echo "Logged in\n";
         echo $_SESSION['username'];
