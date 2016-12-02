@@ -6,6 +6,7 @@
     <?php
     if(!isset($_SESSION['username'])){
         echo '
+    Your username is'.$_SESSION['username'].'
     <li><a href="?page=login">Login</a></li>
     <li><a href="?page=register">Register</a></li>
         ';
@@ -13,7 +14,7 @@
 
 
     if(isset($_SESSION['username'])){
-    echo '
+    echo 'help'.'
     <li><a href="?page=profile">Profile</a></li>
     <li><a href="?page=logout">Logout</a></li>
     ';
@@ -21,7 +22,7 @@
 
 
     if($_SESSION['id']=="1"){
-        echo '
+        echo 'admin'.'
     <li><a href="?page=admin">ADMIN</a></li>
     ';
     }
