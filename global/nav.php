@@ -29,6 +29,7 @@ echo $_SESSION['role'];
 
 
     if(isset($_SESSION['id'])){
+        echo 'ADMIN IS HERE?';
         if($_SESSION['role']==1){
         echo 'admin'.'
     <li><a href="?page=admin">ADMIN</a></li>
