@@ -29,7 +29,7 @@ echo $_SESSION['id'];
 
 
     if(isset($_SESSION['id'])){
-        if($_SESSION['id']=1){
+        if($_SESSION['role']==1){
         echo '
     <li><a href="?page=admin">ADMIN</a></li>
     ';
