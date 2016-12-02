@@ -21,20 +21,18 @@ echo $_SESSION['role'];
 
 
     if(isset($_SESSION['id'])){
-    echo 'help'.'
+    echo ''.'
     <li><a href="?page=profile">Profile</a></li>
     <li><a href="?page=logout">Logout</a></li>
     ';
+        if($_SESSION['role']=="1"){
+            echo 'admin'.'
+    <li><a href="?page=admin">ADMIN</a></li>
+    ';
+        }
     }
 
 
-    if(isset($_SESSION['id'])){
-        echo $_SESSION['role'];
-        if($_SESSION['role']=="1"){
-        echo 'admin'.'
-    <li><a href="?page=admin">ADMIN</a></li>
-    ';
-    }}
     ?>
 
     <li><a href="?page=about">About</a></li>
