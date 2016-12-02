@@ -8,7 +8,7 @@
 
         <div id="banner">
             <a href="/" title = "home">
-            <img src="../img/placeholder.jpg"/>
+            <img src="../img/headerimg.jpg"/>
             </a>
         </div> <!-- Banner -->
 

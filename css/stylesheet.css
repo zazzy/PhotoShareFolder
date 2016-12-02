@@ -16,23 +16,14 @@ body{
     background-color: rgb(8, 8, 8);
     box-shadow: 1px 1px 1px #e7dfc6;
     float: left;
-    /* max-height: 50px; */
-    min-height: 10px;
     min-width: 5%;
     max-width:10%;
-    max-height: 100%;
-    margin-left: -10%;
-    border: 0;
-    padding-left: 10%;
-    padding-bottom: 1px;
+
 }
 #banner img{
 max-width: 20%;
-max-height: 10%;
-min-width: 5%;
-margin: auto;
-float: none;
-display: flex;
+max-height: 30px;
+
 }
 
 #nav{
