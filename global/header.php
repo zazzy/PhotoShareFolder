@@ -6,11 +6,7 @@
 </head>
 <body>
 
-        <div id="banner">
-            <a href="/" title = "home">
-            <img src="../img/headerimg.jpg"/>
-            </a>
-        </div> <!-- Banner -->
+<!-- Banner -->
 
 
 
