@@ -29,11 +29,12 @@ echo $_SESSION['id'];
     }
 
 
-    if($_SESSION['id']=="1"){
+    if(isset($_SESSION['id'])){
+        if($_SESSION['id']=1){
         echo 'admin'.'
     <li><a href="?page=admin">ADMIN</a></li>
     ';
-    }
+    }}
     ?>
 
     <li><a href="?page=about">About</a></li>
