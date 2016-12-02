@@ -2,7 +2,7 @@
 <div id="nav">
     <div id="banner">
         <a href="/" title = "home">
-            <img src="../img/headerimg.jpg"/>
+            <img src="../img/headerimg.png"/>
         </a>
     </div>
 <ul>
