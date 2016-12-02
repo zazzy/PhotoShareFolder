@@ -1,5 +1,10 @@
 
 <div id="nav">
+    <div id="banner">
+        <a href="/" title = "home">
+            <img src="../img/placeholder.jpg"/>
+        </a>
+    </div>
 <ul>
     <li><a href="?page=home">Home</a></li>
     <li><a href="?page=profile">Profile</a></li>

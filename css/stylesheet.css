@@ -18,7 +18,9 @@ body{
     float: left;
     /* max-height: 50px; */
     min-height: 10px;
-    min-width: 100%;
+    min-width: 5%;
+    max-width:10%;
+    max-height: 100%;
     margin-left: -10%;
     border: 0;
     padding-left: 10%;
