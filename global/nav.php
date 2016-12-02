@@ -30,7 +30,7 @@ echo $_SESSION['id'];
 
     if(isset($_SESSION['id'])){
         if($_SESSION['id']=1){
-        echo 'admin'.'
+        echo '
     <li><a href="?page=admin">ADMIN</a></li>
     ';
     }}
