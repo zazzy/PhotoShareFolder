@@ -21,7 +21,7 @@ echo $_SESSION['role'];
 
 
     if(isset($_SESSION['id'])){
-    echo ''.'
+    echo $_SESSION['role'].'
     <li><a href="?page=profile">Profile</a></li>
     <li><a href="?page=logout">Logout</a></li>
     ';
