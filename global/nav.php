@@ -2,6 +2,10 @@
 <div id="nav">
 <ul>
     <?php
+    error_reporting(E_ALL);
+    ini_set('display_errors',1);
+
+
     if(isset($_SESSION['username'])) {
         ?>
         <li><a href="?page=home">Home</a></li>
@@ -21,7 +25,7 @@
         <li><a href="?page=about">About</a></li>
 
         <?php
-    }elseif(isset($_SESSION['id']) && $_SESSION['id']=="1"){
+    }elseif($_SESSION['id']=="1"){
     ?>
         <li><a href="?page=home">Home</a></li>
         <li><a href="?page=profile">Profile</a></li>
