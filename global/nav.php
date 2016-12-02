@@ -4,7 +4,7 @@ session_start();
 
 
 
-echo $_SESSION['id'];
+echo $_SESSION['role'];
 ?>
 <div id="nav">
 <ul>
@@ -30,7 +30,7 @@ echo $_SESSION['id'];
 
     if(isset($_SESSION['id'])){
         if($_SESSION['role']==1){
-        echo '
+        echo 'admin'.'
     <li><a href="?page=admin">ADMIN</a></li>
     ';
     }}
