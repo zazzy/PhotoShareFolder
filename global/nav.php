@@ -1,19 +1,21 @@
-
+<?php
+echo "SESSION TEST" . $_SESSION['id'];
+?>
 <div id="nav">
 <ul>
     <li><a href="?page=home">Home</a></li>
     <li><a href="?page=gallery">Gallery</a></li>
     <?php
-    if(!isset($_SESSION['username'])){
+    if(!isset($_SESSION['id'])){
         echo '
-    Your username is'.$_SESSION['username'].'
+    Your is is'.$_SESSION['is'].'
     <li><a href="?page=login">Login</a></li>
     <li><a href="?page=register">Register</a></li>
         ';
     }
 
 
-    if(isset($_SESSION['username'])){
+    if(isset($_SESSION['id'])){
     echo 'help'.'
     <li><a href="?page=profile">Profile</a></li>
     <li><a href="?page=logout">Logout</a></li>
