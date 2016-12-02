@@ -1,11 +1,9 @@
 
 <div id="nav">
-    <div id="banner">
-        <a href="/" title = "home">
-            <img src="../img/headerimg.png"/>
-        </a>
-    </div>
 <ul>
+    <?php
+    if()
+    ?>
     <li><a href="?page=home">Home</a></li>
     <li><a href="?page=profile">Profile</a></li>
     <li><a href="?page=gallery">Gallery</a></li>

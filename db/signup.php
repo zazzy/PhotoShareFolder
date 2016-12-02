@@ -45,7 +45,7 @@ session_start();
         }
     }
     ?>
-    <meta http-equiv="refresh" content="1;url=index.php" >
+    <meta http-equiv="refresh" content="index.php" >
     </body>
 
 </html>
