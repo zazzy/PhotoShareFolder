@@ -12,7 +12,7 @@ session_start();
 <?php
 
 echo "TESTTTTT";
-$query = mysql_query("select * from user");
+$query = mysql_query("select name from user");
 
 echo "<table>";
 while($rows = mysql_fetch_array($query)) {
