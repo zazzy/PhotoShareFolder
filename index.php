@@ -53,6 +53,9 @@ make dynamic navigation
             case "logout";
                 include 'logout.php';
                 break;
+            case "admin";
+                include 'admin.php';
+                break;
             default:
                 include 'home.php';
                 echo "default";

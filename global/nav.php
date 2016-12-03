@@ -1,10 +1,6 @@
 <?php
 session_start();
 
-
-
-
-echo $_SESSION['role'];
 ?>
 <div id="nav">
 <ul>
@@ -12,8 +8,7 @@ echo $_SESSION['role'];
     <li><a href="?page=gallery">Gallery</a></li>
     <?php
     if(!isset($_SESSION['id'])){
-        echo '
-    Your is is'.$_SESSION['is'].'
+        echo ''.'
     <li><a href="?page=login">Login</a></li>
     <li><a href="?page=register">Register</a></li>
         ';
@@ -26,7 +21,7 @@ echo $_SESSION['role'];
     <li><a href="?page=logout">Logout</a></li>
     ';
         if($_SESSION['role']=="1"){
-            echo 'admin'.'
+            echo ''.'
     <li><a href="?page=admin">ADMIN</a></li>
     ';
         }

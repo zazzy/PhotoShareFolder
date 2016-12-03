@@ -32,6 +32,7 @@ if(isset($_POST['login'])) {
         //header("Location: index.php");
         echo "Logged in\n";
         echo $_SESSION['username'];
+        header("Refresh:0");
     }else{
         echo "Incorrect details\n";
     }
