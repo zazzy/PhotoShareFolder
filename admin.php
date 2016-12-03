@@ -1,6 +1,10 @@
 <?php
 
 session_start();
+error_reporting(E_ALL);
+ini_set('display_errors',1);
+
+
 
 ?>
 <html>
@@ -21,7 +25,7 @@ while($rows = mysql_fetch_array($query)) {
 </tr>";
 }
 echo"<tr>
-<td> TEST TABL1E: </td >
+<td> TEST TABL111E: </td >
 </tr>";
 echo "</table>";
 
