@@ -3,8 +3,7 @@
 session_start();
 error_reporting(E_ALL);
 ini_set('display_errors',1);
-
-
+include("./db/connect.php");
 
 ?>
 <html>
@@ -16,10 +15,10 @@ ini_set('display_errors',1);
 <?php
 
 echo "TESTTTTT";
-$query = mysql_query("select name from user");
+$query = mysqli_query("select name from user");
 
 echo "<table>";
-while($rows = mysql_fetch_array($query)) {
+while($rows = mysqli_fetch_array($query)) {
     echo"<tr>
 <td> Username: </td >
 </tr>";
