@@ -61,9 +61,6 @@ if(isset($_POST["usertoban"])){
     echo "USER ID:".$user;
     mysqli_query($db,"update user set role=".$_POST['changeid']." where id=".$user);
     header("refresh:1");
-}else{
-    echo "plz ".$usertoban;
-
 }
 
 
