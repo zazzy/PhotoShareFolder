@@ -15,7 +15,7 @@ include("./db/connect.php");
 <?php
 
 echo "TESTTTTT";
-$query = mysqli_query($db,"select name from user");
+$query = mysqli_query($db,"select * from user");
 
 echo "<table>";
 while($rows = mysqli_fetch_array($query)) {
