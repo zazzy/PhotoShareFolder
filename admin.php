@@ -41,6 +41,7 @@ echo "</table>";
 echo "<form method='post' enctype='multipart/form-data'>";
 echo "<select>";
 while($rs=mysqli_fetch_array($query)){
+    echo $rs['name'];
 echo "<option name= 'usertoban' value ='test'>test</option>";
 }
 echo "<option name= 'usertoban' value ='11test'>te11st</option>";
