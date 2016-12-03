@@ -32,12 +32,30 @@ while($rows = mysqli_fetch_array($query)) {
 <tr>
 <td> Role: </td>
 <td> ".$rows['role']." </td>
+</tr>
+<tr>
+<td> </td>
 </tr>";
 }
-
 echo "</table>";
+echo "<form method='post' enctype='multipart/form-data'>";
+while($rs=mysqli_fetch_array($query)){
+    echo "<select>
+<option name= 'usertoban' value =".$rs['id'].">".$rs['name']."</option>";
+}
+
+echo '</select>';
+echo '<input name="update" type="submit" autofocus>';
+echo '</form>';
+if(isset($_POST["update"])){
+    $user = $_POST['usertoban'];
+    mysqli_query($db,"update user set role=10 where id=".$user);
+}
+
 
 ?>
+
+
 
 </div>
 </body>
