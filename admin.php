@@ -40,22 +40,19 @@ while($rows = mysqli_fetch_array($query)) {
 echo "</table>";
 echo "<form method='post' enctype='multipart/form-data'>";
 echo "<select>";
-echo "<option name= 'usertoban' value ='11test'>te11st</option>";
+
 $query1 = mysqli_query($db,"select * from user");
 while($rs=mysqli_fetch_array($query1)){
-    echo "<option name= 'usertoban' value ='11test'>".$rs['name']."</option>";
+    echo "<option name= 'usertoban' value =".$rs['id'].">".$rs['name']."</option>";
 }
 
-echo "<option name= 'usertoban' value ='11test'>te11st</option>";
+
 echo '</select>';
 
 echo '<input name="update" type="submit" autofocus>';
 echo '</form>';
-while($rs=mysqli_fetch_array($query1)){
 
-    echo "TEST ".$rs['name'];
-}
-if(isset($_POST["update"])){
+if(isset($_POST["usertoban"])){
     $user = $_POST['usertoban'];
     mysqli_query($db,"update user set role=10 where id=".$user);
 }
