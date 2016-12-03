@@ -12,10 +12,7 @@ session_start();
     <li><a href="?page=login">Login</a></li>
     <li><a href="?page=register">Register</a></li>
         ';
-    }
-
-
-    if(isset($_SESSION['id'])){
+    }elseif(isset($_SESSION['id'])&& !$_SESSION['role']=="10"){
     echo $_SESSION['role'].'
     <li><a href="?page=profile">Profile</a></li>
     <li><a href="?page=logout">Logout</a></li>
