@@ -43,14 +43,18 @@ echo "<select>";
 echo "<option name= 'usertoban' value ='11test'>te11st</option>";
 
 while($rs=mysqli_fetch_array($query)){
-
     echo "<option name= 'usertoban' value ='11test'>".$rs['name']."</option>";
 }
 
 echo "<option name= 'usertoban' value ='11test'>te11st</option>";
 echo '</select>';
+
 echo '<input name="update" type="submit" autofocus>';
 echo '</form>';
+while($rs=mysqli_fetch_array($query)){
+
+    echo "TEST ".$rs['name'];
+}
 if(isset($_POST["update"])){
     $user = $_POST['usertoban'];
     mysqli_query($db,"update user set role=10 where id=".$user);
