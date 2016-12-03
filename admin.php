@@ -39,11 +39,11 @@ while($rows = mysqli_fetch_array($query)) {
 }
 echo "</table>";
 echo "<form method='post' enctype='multipart/form-data'>";
-echo "<select>";
+echo "<select name='usertoban'>";
 
 $query1 = mysqli_query($db,"select * from user");
 while($rs=mysqli_fetch_array($query1)){
-    echo "<option name= 'usertoban' value =".$rs['id'].">".$rs['name']."</option>";
+    echo "<option value =".$rs['id'].">".$rs['name']."</option>";
 }
 
 
