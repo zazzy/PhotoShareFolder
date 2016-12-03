@@ -44,6 +44,8 @@ while($rs=mysqli_fetch_array($query)){
 echo "<option name= 'usertoban' value ='test'>test</option>";
 }
 echo "<option name= 'usertoban' value ='11test'>te11st</option>";
+echo "<option name= 'usertoban' value ='11test'>".$rs['name']."</option>";
+echo "<option name= 'usertoban' value ='11test'>te11st</option>";
 echo '</select>';
 echo '<input name="update" type="submit" autofocus>';
 echo '</form>';
