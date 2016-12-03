@@ -16,10 +16,9 @@ session_start();
     if(isset($_SESSION['id'])){
         if($_SESSION['role']!="10"){
     echo '
-    <li><a href="?page=profile">Profile</a></li>
-    <li><a href="?page=logout">Logout</a></li>
-    ';
-           echo'<li><a href="?page=logout">Logout</a></li>';}
+    <li><a href="?page=profile">Profile</a></li>';
+        }
+        echo'<li><a href="?page=logout">Logout</a></li>';
         if($_SESSION['role']=="1"){
             echo ''.'
     <li><a href="?page=admin">ADMIN</a></li>
