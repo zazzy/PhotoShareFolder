@@ -14,7 +14,7 @@ include("./db/connect.php");
 
 <?php
 
-echo "TESTTTTT";
+
 $query = mysqli_query($db,"select * from user");
 
 echo "<table>";
@@ -39,9 +39,10 @@ while($rows = mysqli_fetch_array($query)) {
 }
 echo "</table>";
 echo "<form method='post' enctype='multipart/form-data'>";
+echo "<select>";
 while($rs=mysqli_fetch_array($query)){
-    echo "<select>
-<option name= 'usertoban' value =".$rs['id'].">".$rs['name']."</option>";
+
+echo "<option name= 'usertoban' value =".$rs['id'].">".$rs['name']."</option>";
 }
 
 echo '</select>';
