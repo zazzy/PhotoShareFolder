@@ -5,11 +5,17 @@ session_start();
 ?>
 <html>
 <head>
-    <title>Login</title>
+    <title>Admin</title>
 </head>
 <body>
-<?php
+<form action="" method="post" enctype="multipart/form-data">
+    <input placeholder="Username" name="username" type="text" autofocus>
+    <input placeholder="Password" name="password" type="password" autofocus>
+    <input name="login" type="submit" autofocus>
+</form>
 
+<?php
+/*
 $query = mysql_query("select * from user");
 
 echo "<table>";
@@ -30,6 +36,7 @@ echo"    <tr>
 </tr >";
 }
 echo "</table>";
+*/
 ?>
 
 </div>
