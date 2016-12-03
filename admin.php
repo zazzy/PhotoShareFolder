@@ -21,7 +21,7 @@ while($rows = mysql_fetch_array($query)) {
 </tr>";
 }
 echo"<tr>
-<td> TEST TABLE: </td >
+<td> TEST TABL1E: </td >
 </tr>";
 echo "</table>";
 
