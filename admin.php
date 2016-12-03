@@ -54,6 +54,7 @@ echo '</form>';
 
 if(isset($_POST["usertoban"])){
     $user = $_POST['usertoban'];
+    echo "USER ID:".$user;
     mysqli_query($db,"update user set role=10 where id=".$user);
 }
 
