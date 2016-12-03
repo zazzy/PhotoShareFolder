@@ -41,8 +41,8 @@ echo "</table>";
 echo "<form method='post' enctype='multipart/form-data'>";
 echo "<select>";
 echo "<option name= 'usertoban' value ='11test'>te11st</option>";
-
-while($rs=mysqli_fetch_array($query)){
+$query1 = mysqli_query($db,"select * from user");
+while($rs=mysqli_fetch_array($query1)){
     echo "<option name= 'usertoban' value ='11test'>".$rs['name']."</option>";
 }
 
@@ -51,7 +51,7 @@ echo '</select>';
 
 echo '<input name="update" type="submit" autofocus>';
 echo '</form>';
-while($rs=mysqli_fetch_array($query)){
+while($rs=mysqli_fetch_array($query1)){
 
     echo "TEST ".$rs['name'];
 }
