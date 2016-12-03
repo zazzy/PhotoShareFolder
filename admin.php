@@ -44,6 +44,10 @@ echo "<select name='usertoban'>";
 $query1 = mysqli_query($db,"select * from user");
 while($rs=mysqli_fetch_array($query1)){
     echo "<option value =".$rs['id'].">".$rs['name']."</option>";
+    echo "<select name='changeid'>";
+    echo "<option value ='0'>Shopper</option>";
+    echo "<option value ='10'>Banned</option>";
+    echo "<option value ='2'>Photographer</option>";
 }
 
 
@@ -55,7 +59,7 @@ echo '</form>';
 if(isset($_POST["usertoban"])){
     $user = $_POST['usertoban'];
     echo "USER ID:".$user;
-    mysqli_query($db,"update user set role=10 where id=".$user);
+    mysqli_query($db,"update user set role=".$_POST['changedid']." where id=".$user);
 }else{
     echo "plz ".$usertoban;
 
