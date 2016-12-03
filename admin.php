@@ -44,14 +44,14 @@ echo "<select name='usertoban'>";
 $query1 = mysqli_query($db,"select * from user");
 while($rs=mysqli_fetch_array($query1)){
     echo "<option value =".$rs['id'].">".$rs['name']."</option>";
-    echo "<select name='changeid'>";
-    echo "<option value ='0'>Shopper</option>";
-    echo "<option value ='10'>Banned</option>";
-    echo "<option value ='2'>Photographer</option>";
+
 }
-
-
 echo '</select>';
+echo "<select name='changeid'>";
+echo "<option value ='0'>Shopper</option>";
+echo "<option value ='10'>Banned</option>";
+echo "<option value ='2'>Photographer</option>";
+echo "</select>";
 
 echo '<input name="update" type="submit" autofocus>';
 echo '</form>';
