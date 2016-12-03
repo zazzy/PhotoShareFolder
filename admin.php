@@ -21,11 +21,20 @@ echo "<table>";
 while($rows = mysqli_fetch_array($query)) {
     echo"<tr>
 <td> Username: </td >
+<td> ".$rows['name']." </td >
+</tr>
+
+<tr>
+<td> ID: </td>
+<td> ".$rows['id']." </td>
+</tr>
+
+<tr>
+<td> Role: </td>
+<td> ".$rows['role']." </td>
 </tr>";
 }
-echo"<tr>
-<td> TEST TABL111E: </td >
-</tr>";
+
 echo "</table>";
 
 ?>
