@@ -41,7 +41,7 @@
         echo "<tr><td>User: " .$imageU."</td><tr>";
 
         echo "<tr><td>Price: ".$imagePrice."</td><tr>";
-        echo "<tr><td>Meta: ".$imageInfoArray[2]."x".$imageInfoArray[3]."</td></tr>";
+        echo "<tr><td>Meta Size: ".$imageInfoArray[2]."</td></tr>";
         echo "</table></div>";
         echo "</div>";
     }

@@ -59,29 +59,33 @@ include("./db/uploads/uploadFile.php");
     $userHandler->execute();
     $imageU = "UN";
     while($row = $handler->fetch(PDO::FETCH_ASSOC)){
-    $image=$row['imgurl'];
+        $image=$row['imgurl'];
         $imageName = $row['file_name'];
         $imageDesc =$row['Description'];
 
         while($row2 = $userHandler->fetch(PDO::FETCH_ASSOC)){
-        if($row2['id']==$row['user_id']){
-            $imageU =$row2['name'];
-        }}
+            if($row2['id']==$row['user_id']){
+                $imageU =$row2['name'];
+            }}
 
 
 
         $imagePrice = $row['price'];
         echo "<div id = fullholder>";
-    echo "<img id ='userImg' src=./".$image.">";
+        echo "<img id ='userImg' src=./".$image.">";
         echo "<div id = fullholderDetails><table>";
 
-        echo "<tr><td>Name: ".$imageName."</td><tr>";
+        $imageInfo = exif_read_data("./".$image,"computed",false,false);
 
+        $imageInfoArray = array_values($imageInfo);
+        echo "<tr><td>Name: ".$imageName."</td><tr>";
         echo "<tr><td>Desc: ".$imageDesc."</td><tr>";
 
         echo "<tr><td>User: " .$imageU."</td><tr>";
 
-        echo "<tr><td>Price: £".$imagePrice."</td><tr>";
+        echo "<tr><td>Price: ".$imagePrice."</td><tr>";
+        echo "<tr><td>".include("paypal.php")."</td><tr>";
+        echo "<tr><td>Meta Size: ".$imageInfoArray[2]."</td></tr>";
         echo "</table></div>";
         echo "</div>";
     }

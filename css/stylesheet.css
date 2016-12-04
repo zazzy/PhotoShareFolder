@@ -137,6 +137,18 @@ background-color: #E9F1F7;
     padding: 3%;
 }
 
+#payButton{
+height: 100%;
+}
+
+#payButton {
+display: flex;
+align-content: center;
+justify-content: center;
+align-items: center;
+
+}
+
 #fullholder{
     width: 100%;
     heigh: 100%;
