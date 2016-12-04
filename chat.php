@@ -10,7 +10,9 @@
     var name = "<?php echo $_SESSION['username'] ?>";
 </script>
 <div id ="chatBox"></div>
+
 <?php
+/*
 if(file_exists("log.html") && filesize("log.html")>0){
     $handle = fopen("log.html","r");
     $contents = fread($handle,filezise("log.html"));
@@ -18,6 +20,7 @@ if(file_exists("log.html") && filesize("log.html")>0){
 
     echo $contents;
 }
+*/
 
 ?>
 
