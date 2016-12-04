@@ -57,8 +57,9 @@ $("#submitmsg").click(function(){
 function loadLog(){
     var chatDiv =$('#chatBox');
     var oldHeight = chatDiv.attr("scrollHeight")-20;
-
+    chatDiv.animate({scrollTop: chatDiv.prop("scrollHeight")},1000);
 $.ajax({
+
     url:"log.html",
     cache:false,
     success: function(html){
@@ -70,7 +71,7 @@ $.ajax({
        }
     }
 });
-    chatDiv.scrollTop(chatDiv.prop("scrollHeight"));
+    chatDiv.animate({scrollTop: chatDiv.prop("scrollHeight")},1000);
 }
 
 
