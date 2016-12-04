@@ -43,7 +43,7 @@ if(file_exists("log.html") && filesize("log.html")>0){
 $("#submitmsg").click(function(){
     var userMsg = $('#msg').val();
     $.post("post.php",{text:userMsg});
-    $("#msg").attr("value","");
+    $("#msg").val("");
     $.ajax({
         type:'POST',
         url:'index.php',
