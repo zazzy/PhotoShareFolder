@@ -66,10 +66,10 @@ include("./db/uploads/uploadFile.php");
     echo "<img id ='userImg' src=./".$image.">";
         echo "<div id = fullholderDetails><table>";
         echo "<br>";
-        echo "<tr><td>Name: ".$imageName."<td><tr>";
-        echo "<tr><td>Description: ".$imageDesc."<td><tr>";
-        echo "<tr><td>User ID: " .$imageUID."</td><tr>";
-        echo "<tr><td>Price: ".$imagePrice."</td><tr>";
+        echo "<tr><td>Name: ".$imageName."<td><td></td><tr>";
+        echo "<tr><td>Description: ".$imageDesc."<td><td></td><tr>";
+        echo "<tr><td>User ID: " .$imageUID."</td><td></td><tr>";
+        echo "<tr><td>Price: ".$imagePrice."</td><td></td><tr>";
         echo "</table></div>";
         echo "</div>";
     }
