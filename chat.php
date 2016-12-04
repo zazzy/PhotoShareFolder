@@ -9,7 +9,7 @@
 <script type='text/javascript'>
     var name = "<?php echo $_SESSION['username'] ?>";
 </script>
-<id ="chatBox">
+<div id ="chatBox">
 
 <?php
 
