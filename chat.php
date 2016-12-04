@@ -30,11 +30,11 @@ if(file_exists("log.html") && filesize("log.html")>0){
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js"></script>
 <script type ="text/javascript">
     setInterval(loadLog,2000);
-
+/*
 $("#submitmsg").click(function(){
     var userMsg = $('#msg').val();
-    /*$.post("post.php",{text:userMsg});
-    $("#msg").attr("value","");*/
+    $.post("post.php",{text:userMsg});
+    $("#msg").attr("value","");
     return false;
 
 });
@@ -53,7 +53,7 @@ $.ajax({
 });
 }
 
-
+*/
 
 </script>
 </body>
