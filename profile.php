@@ -64,13 +64,13 @@ include("./db/uploads/uploadFile.php");
         $imagePrice = $row['price'];
         echo "<div id = fullholder>";
     echo "<img id ='userImg' src=./".$image." alt=Name: ".$imageName." Desc: ".$imageDesc." User: ".$imageUID." Price: £".$imagePrice.">";
-        echo "<div id = fullholderDetails>";
+        echo "<div id = fullholderDetails><table>";
         echo "<br>";
-        echo "Name: ".$imageName."<br>";
-        echo " Description: ".$imageDesc."<br>";
-        echo " User ID: " .$imageUID."<br>";
-        echo " Price: ".$imagePrice."<br>";
-        echo "</div>";
+        echo "<tr><td>Name: ".$imageName."<td><tr>";
+        echo "<tr><td>Description: ".$imageDesc."<td><tr>";
+        echo "<tr><td>User ID: " .$imageUID."</td><tr>";
+        echo "<tr><td>Price: ".$imagePrice."</td><tr>";
+        echo "</table></div>";
         echo "</div>";
     }
 
