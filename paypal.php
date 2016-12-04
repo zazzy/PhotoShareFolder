@@ -1,3 +1,4 @@
+
 <script src="https://www.paypalobjects.com/api/checkout.js" data-version-4></script>
 
 <div id = "paypal-button">
