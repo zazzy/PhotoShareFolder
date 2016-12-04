@@ -98,8 +98,8 @@ background-color: #E9F1F7;
     -webkit-column-count: 5;
     -moz-column-count: 5;
     column-count: 5;
-    -webkit-column-gap: 0px;
-    -moz-column-gap: 0px;
+    -webkit-column-gap: 20px;
+    -moz-column-gap:20px;
     column-gap: 20px;
 
 }
@@ -134,19 +134,16 @@ background-color: #E9F1F7;
 }
 
 #fullholder{
-    width: 100%;
-    margin-bottom: 15px;
-    overflow: auto;
-    height:100%;
+    width: 100%
+    heigh: 100%
     float: left;
-    background-color: #282A2C;
+
 }
 #fullholderDetails{
     width: 90%;
     height: 80px;
-    overflow: hidden;
     margin: 5px;
-
+    background-color: #282A2C;
 }
 
 #userImg{
