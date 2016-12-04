@@ -2,7 +2,7 @@
 <head>
     <title>Chat Room</title>
     <script></script>
-    <link rel="stylesheet" href="./css/stylesheet.css"/>
+
     <link rel="stylesheet" href="./css/chatss.css"/>
 </head>
 <body>
@@ -12,7 +12,7 @@
 <div id ="chatBox"></div>
 
 <?php
-/*
+
 if(file_exists("log.html") && filesize("log.html")>0){
     $handle = fopen("log.html","r");
     $contents = fread($handle,filezise("log.html"));
@@ -20,7 +20,7 @@ if(file_exists("log.html") && filesize("log.html")>0){
 
     echo $contents;
 }
-*/
+
 
 ?>
 
@@ -33,7 +33,7 @@ if(file_exists("log.html") && filesize("log.html")>0){
 
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js"></script>
 <script type ="text/javascript">
-    /*
+
     setInterval(loadLog,2000);
 
 $("#submitmsg").click(function(){
@@ -62,7 +62,6 @@ $.ajax({
     }
 });
 }
-*/
 
 
 </script>
