@@ -1,3 +1,3 @@
-<?php
-
-?>HOME!!?
+<?
+include("chat.php");
+?>
