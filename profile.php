@@ -62,7 +62,10 @@ include("./db/uploads/uploadFile.php");
         $imageDesc =$row['Description'];
         $imageUID =$row['user_id'];
         $imagePrice = $row['price'];
+        echo "<div id = fullholder>";
     echo "<img id ='userImg' src=./".$image." alt=Name: ".$imageName." Desc: ".$imageDesc." User: ".$imageUID." Price: £".$imagePrice.">";
+    echo "Name: ".$imageName." Description: ".$imageDesce." User ID: " .$imageUID." Price: ".$imagePrice."";
+        echo "</div>";
     }
 
 ?>
@@ -71,13 +74,15 @@ include("./db/uploads/uploadFile.php");
 
 </section>
 </body>
+<!--
 <div id="myImageHolder" class="holder">
     <span class="close" onclick="document.getElementById('myImageHolder').style.display='none'">&times;</span>
     <img class = "myImageHolderImage" id="userImageHeld">
     <div id="myImageData"></div>
 </div>
-
+-->
 </html>
+<!--
     <script type="text/javascript">
         window.onload=function() {
             var holder = document.getElementById('myImageHolder');
@@ -97,7 +102,7 @@ include("./db/uploads/uploadFile.php");
              }
         }
     </script>
-
+ -->
 <?php
 
 ?>

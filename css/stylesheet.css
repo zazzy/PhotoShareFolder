@@ -133,6 +133,12 @@ background-color: #E9F1F7;
     height: auto;
 }
 
+#fullholder{
+    width: auto;
+    float: left;
+    background-color: green;
+}
+
 #userImg{
     -webkit-transition: prop 0.5s;
     -moz-transition: prop 0.5s;
