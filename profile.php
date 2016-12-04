@@ -63,20 +63,18 @@ include("./db/uploads/uploadFile.php");
         $imageUID =$row['user_id'];
         $imagePrice = $row['price'];
         echo "<div id = fullholder>";
-        ?>
-        <img id ='userImg' src=./".$image.">";
-        <div id = fullholderDetails><table>
-        <br>
-        <tr><td>Name: ".$imageName."</td><tr>
-        <br>
-        <tr><td>Description: ".$imageDesc."</td><tr>
-        <br>
-        <tr><td>User ID: " .$imageUID."</td><tr>
-        <br>
-        <tr><td>Price: ".$imagePrice."</td><tr>
-        </table></div>
-        </div>
-        <?
+    echo "<img id ='userImg' src=./".$image.">";
+        echo "<div id = fullholderDetails><table>";
+
+        echo "<tr><td>Name: ".$imageName."</td><tr>";
+        echo "<tr><td>    </td></tr>";
+        echo "<tr><td>Description: ".$imageDesc."</td><tr>";
+        echo "<tr><td>    </td></tr>";
+        echo "<tr><td>User ID: " .$imageUID."</td><tr>";
+        echo "<tr><td>    </td></tr>";
+        echo "<tr><td>Price: ".$imagePrice."</td><tr>";
+        echo "</table></div>";
+        echo "</div>";
     }
 
 ?>
