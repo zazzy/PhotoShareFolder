@@ -65,7 +65,7 @@ include("./db/uploads/uploadFile.php");
 
         while($row2 = $userHandler->fetch(PDO::FETCH_ASSOC)){
         if($row2['id']==$row['user_id']){
-            $imageU =$row2['user'];
+            $imageU =$row2['name'];
         }}
 
 
