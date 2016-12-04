@@ -67,6 +67,7 @@ $.ajax({
             $('#chatBox').animation({scrollTop: newHeight},'normal');
        }
     }
+    $('#chatBox').animation({"scrollTop": $('#chatBox')[0].scrollHeight},'normal');
 });
 }
 
