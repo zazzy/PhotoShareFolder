@@ -139,13 +139,14 @@ background-color: #E9F1F7;
     float: left;
     border-style: ridge;
     border-color: #777c80;
+    background-color: #282A2C;
 
 }
 #fullholderDetails{
     width: 90%;
     height: 80px;
     margin: 5px;
-    background-color: #282A2C;
+
 }
 
 #userImg{

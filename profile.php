@@ -55,12 +55,21 @@ include("./db/uploads/uploadFile.php");
     $handler = $PDO->prepare("select * from image where user_id =".$_SESSION['id']);
 
     $handler->execute();
-
+    $userHandler = $PDO->prepare("select * from user");
+    $userHandler->execute();
+    $imageU = "UN";
     while($row = $handler->fetch(PDO::FETCH_ASSOC)){
     $image=$row['imgurl'];
         $imageName = $row['file_name'];
         $imageDesc =$row['Description'];
-        $imageU =$row['name'];
+
+        while($row2 = $userHandler->fetch(PDO::FETCH_ASSOC)){
+        if($row2['id']==$row['user_id']){
+            $imageU =$row2['user'];
+        }}
+
+
+
         $imagePrice = $row['price'];
         echo "<div id = fullholder>";
     echo "<img id ='userImg' src=./".$image.">";
