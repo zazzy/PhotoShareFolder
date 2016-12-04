@@ -62,6 +62,7 @@ $.ajax({
     success: function(html){
         $("#chatBox").html(html);
         var newHeight = $('chatBox').attr("scrollHeight")-20;
+        $('#chatBox').animation({"scrollTop": $('#chatBox')[0].scrollHeight},'normal');
         if(newHeight>oldHeight){
             $('#chatBox').animation({scrollTop: newHeight},'normal');
        }
