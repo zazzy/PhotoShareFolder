@@ -42,11 +42,12 @@ include("./db/uploads/uploadFile.php");
                 <td><input type = "submit" name ="usubmit" value="Upload""/></td>
             </tr>
         </table>
-    </form>
+    </form>    <?
+        include("chat.php");
+        ?>
+
     </div>
-    <?
-    include("chat.php");
-    ?>
+
 
 </div>
 <section id ="photo_view">
