@@ -60,22 +60,19 @@ include("./db/uploads/uploadFile.php");
     $image=$row['imgurl'];
         $imageName = $row['file_name'];
         $imageDesc =$row['Description'];
-        $imageUID =$row['user_id'];
+        $imageU =$row['name'];
         $imagePrice = $row['price'];
         echo "<div id = fullholder>";
     echo "<img id ='userImg' src=./".$image.">";
         echo "<div id = fullholderDetails><table>";
-        echo "<tr><td>    </td></tr>";
+
         echo "<tr><td>Name: ".$imageName."</td><tr>";
-        echo "<tr><td>    </td></tr>";
-        echo "<tr><td>    </td></tr>";
-        echo "<tr><td>Description: ".$imageDesc."</td><tr>";
-        echo "<tr><td>    </td></tr>";
-        echo "<tr><td>    </td></tr>";
-        echo "<tr><td>User ID: " .$imageUID."</td><tr>";
-        echo "<tr><td>    </td></tr>";
-        echo "<tr><td>    </td></tr>";
-        echo "<tr><td>Price: ".$imagePrice."</td><tr>";
+
+        echo "<tr><td>Desc: ".$imageDesc."</td><tr>";
+
+        echo "<tr><td>User: " .$imageU."</td><tr>";
+
+        echo "<tr><td>Price: £".$imagePrice."</td><tr>";
         echo "</table></div>";
         echo "</div>";
     }
