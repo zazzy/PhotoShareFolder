@@ -47,9 +47,19 @@ if(isset($_POST['login'])) {
 
 
 <form action="" method="post" enctype="multipart/form-data">
-    <input placeholder="Username" name="username" type="text" autofocus>
-    <input placeholder="Password" name="password" type="password" autofocus>
-    <input name="login" type="submit" autofocus>
+    <table>
+        <tr>
+            <td>Username: </td>
+    <td><input placeholder="Username" name="username" type="text" autofocus></td>
+        </tr>
+            <tr>
+                <td>Password: </td>
+            <td><input placeholder="Password" name="password" type="password" autofocus></td>
+            </tr>
+            <tr>
+            <td><input name="login" type="submit" autofocus></td>
+            </tr>
+        </table>
 </form>
 
 </div>
