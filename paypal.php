@@ -1,3 +1,7 @@
+<html>
+<head></head>
+<body>
+
 
 <script src="https://www.paypalobjects.com/api/checkout.js" data-version-4></script>
 
@@ -40,3 +44,6 @@
         }, '#paypal-button');
     </script>
     </div>
+
+</body>
+</html>
