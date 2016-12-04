@@ -1,7 +1,7 @@
 <html>
 <head>
     <title>Chat Room</title>
-   <link rel="stylesheet" href="/css/chatss.css"/>
+   <link rel="stylesheet" href="/css/chatss.css" type="text/css"/>
 </head>
 <body>
 <script type='text/javascript'>
@@ -13,7 +13,7 @@
 
 if(file_exists("log.html") && filesize("log.html")>0){
     $handle = fopen("log.html","r");
-    $contents = fread($handle,filezise("log.html"));
+    $contents = fread($handle,filesize("log.html"));
     fclose($handle);
 
     echo $contents;
