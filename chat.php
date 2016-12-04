@@ -55,15 +55,18 @@ $("#submitmsg").click(function(){
 });
 
 function loadLog(){
-    var oldHeight = $('#chatBox').attr("scrollHeight")-20;
+    var chatDiv =$('#chatBox');
+    var oldHeight = chatDiv.attr("scrollHeight")-20;
+
 $.ajax({
     url:"log.html",
     cache:false,
     success: function(html){
-        $("#chatBox").html(html);
+        chatDiv.html(html);
         var newHeight = $('chatBox').attr("scrollHeight")-20;
         if(newHeight>oldHeight){
-            $('#chatBox').animation({scrollTop: newHeight},'normal');
+            chatDiv.animation({scrollTop: newHeight},'normal');
+            chatDiv.scrollTop(chatDiv.prop("scrollHeight"));
        }
     }
 });
