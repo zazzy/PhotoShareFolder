@@ -58,10 +58,36 @@ include("./db/uploads/uploadFile.php");
 
     while($row = $handler->fetch(PDO::FETCH_ASSOC)){
     $image=$row['imgurl'];
-    echo "<img src=./".$image.">";
+        $imageName = $row['file_name'];
+        $imageDesc =$row['Description'];
+        $imageUID =$row['user_id'];
+        $imagePrice = $row['price'];
+    echo "<img id ='userImg' src=./".$image." alt=Name: ".$imageName." Desc: ".$imageDesc." User: ".$imageUID." Price: £".$imagePrice.">";
     }
-?>
 
+?>
+    <script type="text/javascript">
+        var holder = document.getElementById('myImageHolder');
+        var image = document.getElementById('userImg');
+        var userImage = document.getElementById('userImageHeld');
+        var imageData = document.getElementsById('myImageData');
+        image.onclick = function(){
+            holder.style.display="block";
+            userImage.src=this.src;
+            imageData.innerHTML=this.alt;
+
+        }
+        var span = document.getElementsByClassName("close")[0];
+        span.onclick=function(){
+            holder.style.display="none";
+        }
+    </script>
+
+<div id="myImageHolder" class="holder">
+    <span class="close" onclick="document.getElementById('myImageHolder').style.display='none'">&times;</span>
+    <img class = "myImageHolderImage" id="userImageHeld">
+    <div id="myImageData"></div>
+</div>
 
 </section>
 </body>

@@ -133,6 +133,50 @@ background-color: #E9F1F7;
     height: auto;
 }
 
+#userImg{
+    -webkit-transition: prop 0.5s;
+    -moz-transition: prop 0.5s;
+    -ms-transition: prop 0.5s;
+    -o-transition: prop 0.5s;
+    transition: prop 0.5s;
+}
+#userImg:hover{
+    zoom: 5%;
+}
+.myImageHolder{
+    width: 100%;
+    height: 100%;
+    display: none;
+    background-color: rgba(0,0,0,0.9);
+    position: fixed;
+    padding-top: 10%;
+    overflow: auto;
+    z-index: 1;
+
+
+}
+.myImageHolderImage{
+    marigin:auto;
+    display: block;
+    width: 80%;
+    max-width: 50%;
+}
+#myImageData{
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 50%;
+    text-align: left;
+    padding: 10px 0;
+    height: 200px;
+}
+.close{
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: red;
+
+}
 
 /* --------------media----------------- */
 
