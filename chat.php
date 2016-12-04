@@ -62,12 +62,10 @@ $.ajax({
     success: function(html){
         $("#chatBox").html(html);
         var newHeight = $('chatBox').attr("scrollHeight")-20;
-        $('#chatBox').animate({"scrollTop": $('#chatBox')[0].scrollHeight},'normal');
         if(newHeight>oldHeight){
-            $('#chatBox').animate({scrollTop: newHeight},'normal');
+            $('#chatBox').animation({scrollTop: newHeight},'normal');
        }
     }
-    $('#chatBox').animation({scrollTop: $('#chatBox').prop("scrollHeight")-$('#chatBox').height()},3000;
 });
 }
 
