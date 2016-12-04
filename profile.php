@@ -66,22 +66,7 @@ include("./db/uploads/uploadFile.php");
     }
 
 ?>
-    <script type="text/javascript">
-        var holder = document.getElementById('myImageHolder');
-        var image = document.getElementById('userImg');
-        var userImage = document.getElementById('userImageHeld');
-        var imageData = document.getElementById('myImageData');
-        image.onclick = function(){
-            holder.style.display="block";
-            userImage.src=this.src;
-            imageData.innerHTML=this.alt;
 
-        }/*
-        var span = document.getElementsByClassName("close")[0];
-        span.onclick=function(){
-            holder.style.display="none";
-        }*/
-    </script>
 
 <div id="myImageHolder" class="holder">
     <span class="close" onclick="document.getElementById('myImageHolder').style.display='none'">&times;</span>
@@ -92,6 +77,25 @@ include("./db/uploads/uploadFile.php");
 </section>
 </body>
 </html>
+    <script type="text/javascript">
+        window.onload=function() {
+            var holder = document.getElementById('myImageHolder');
+            var image = document.getElementById('userImg');
+            var userImage = document.getElementById('userImageHeld');
+            var imageData = document.getElementById('myImageData');
+            image.onclick = function () {
+                holder.style.display = "block";
+                userImage.src = this.src;
+                imageData.innerHTML = this.alt;
+
+            }
+            /*
+             var span = document.getElementsByClassName("close")[0];
+             span.onclick=function(){
+             holder.style.display="none";
+             }*/
+        }
+    </script>
 
 <?php
 
