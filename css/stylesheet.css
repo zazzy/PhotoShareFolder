@@ -138,6 +138,11 @@ background-color: #E9F1F7;
     float: left;
     background-color: green;
 }
+#fullholderDetails{
+    width: 100%;
+    height: auto;
+    background-color: red;
+}
 
 #userImg{
     -webkit-transition: prop 0.5s;
