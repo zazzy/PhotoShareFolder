@@ -1,5 +1,4 @@
 <?
-session_start();
 error_reporting(E_ALL);
 ini_set('display_errors',1);
 ?>
@@ -22,6 +21,8 @@ if(file_exists("log.html") && filesize("log.html")>0){
     fclose($handle);
 
     echo $contents;
+}else{
+    echo "error";
 }
 
 
@@ -52,11 +53,12 @@ $("#submitmsg").click(function(){
 
 });
 function loadLog(){
-    $var oldHeight = $('#chatBox').attribute("scrollHeight")-20;
+    var oldHeight = $('#chatBox').attribute("scrollHeight")-20;
 $.ajax({
     url:"log.html",
     cache:false,
     success:function(html){
+        <? echo "logged"; ?>
         $("#chatBox").html(html);
         var newHeight = $('chatBox').attribute("scrollHeight")-20;
         if(newHeight>oldHeight){
