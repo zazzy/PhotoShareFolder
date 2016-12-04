@@ -1,12 +1,5 @@
 <div id = "home_container">
-<div id = "chat_container">
-<?
-if(isset($_SESSION['id'])){
-    include("chat.php");
 
-}
-?>
-</div>
 <div id = "content_container">
 <h3><?php if(isset($_SESSION['username'])){
     echo 'Welcome '.ucfirst(strtolower($_SESSION['username']));
@@ -18,5 +11,13 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce quis suscipit lec
 
 Donec feugiat sed dui gravida luctus. Mauris iaculis accumsan quam non posuere. Fusce at quam eget elit sollicitudin fermentum nec id massa. Praesent a mollis nunc, ut scelerisque felis. Integer nec augue porttitor, euismod ipsum eget, mattis massa. Etiam pharetra vulputate sodales. Morbi metus tortor, lacinia a tortor a, auctor suscipit odio. Duis tempus neque sed mi semper, a volutpat urna suscipit. Aenean laoreet sapien quis fringilla gravida. Pellentesque vitae ultricies leo, auctor finibus odio.
 </div>
+    <div id = "chat_container">
+        <?
+        if(isset($_SESSION['id'])){
+            include("chat.php");
+
+        }
+        ?>
+    </div>
 
 </div>
