@@ -22,7 +22,7 @@ if(file_exists("log.html") && filesize("log.html")>0){
 ?>
 
 
-<form name = "message" action ="index.php/?page=profile">
+<form name = "message" action ="">
     <input name= "msg" type="text" id="msg"/>
     <input name ="submitmsg" type="submit" id="submitmsg" value="Send"/>
 </form>
@@ -35,6 +35,11 @@ $("#submitmsg").click(function(){
     var userMsg = $('#msg').val();
     $.post("post.php",{text:userMsg});
     $("#msg").attr("value","");
+    $.ajax({
+        type:'POST',
+        url:'index.php',
+        data: 'page=profile'
+    })
     return false;
 
 });
