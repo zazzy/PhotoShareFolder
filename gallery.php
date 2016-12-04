@@ -9,7 +9,7 @@
     include("./db/connect.php");
 
     $PDO = new PDO($dsn,"b7716a5fb7c215","2471e43b096d840");
-    $handler = $PDO->prepare("select * from image where user_id =".$_SESSION['id']);
+    $handler = $PDO->prepare("select * from image");
 
     $handler->execute();
     $userHandler = $PDO->prepare("select * from user");

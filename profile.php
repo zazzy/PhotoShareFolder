@@ -84,7 +84,7 @@ include("./db/uploads/uploadFile.php");
         echo "<tr><td>User: " .$imageU."</td><tr>";
 
         echo "<tr><td>Price: ".$imagePrice."</td><tr>";
-        echo "<tr><td>".include("./paypal.php")."</td><tr>";
+        echo "<tr><td>".include("paypal.php")."</td><tr>";
         echo "<tr><td>Meta Size: ".$imageInfoArray[2]."</td></tr>";
         echo "</table></div>";
         echo "</div>";
