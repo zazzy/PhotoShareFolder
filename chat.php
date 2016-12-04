@@ -9,7 +9,7 @@
 <script type='text/javascript'>
     var name = "<?php echo $_SESSION['username'] ?>";
 </script>
-<div id ="chatBox"></div>
+<id ="chatBox">
 
 <?php
 
@@ -30,7 +30,7 @@ if(file_exists("log.html") && filesize("log.html")>0){
     <input name= "msg" type="text" id="msg"/>
     <input name ="submitmsg" type="submit" id="submitmsg" value="Send"/>
 </form>
-
+</div>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js"></script>
 <script type ="text/javascript">
 
