@@ -58,7 +58,6 @@ make dynamic navigation
                 break;
             default:
                 include 'home.php';
-                echo "default";
                 break;
         }
 
