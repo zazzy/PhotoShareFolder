@@ -119,14 +119,17 @@ background-color: #E9F1F7;
 #home_container{
     width: 100%;
     height: auto;
-    display: inline-block;
+    display: inline-flex;
 }
 #chat_container{
-    width: 40%;
+    width: 50%;
     height: auto;
+    margin-right: -2%;
+    margin-top: 5%;
+
 }
 #content_container{
-    width: 40%;
+    width: 100%;
     height: auto;
 }
 
