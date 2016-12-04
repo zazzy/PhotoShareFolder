@@ -62,12 +62,12 @@ $.ajax({
     success: function(html){
         $("#chatBox").html(html);
         var newHeight = $('chatBox').attr("scrollHeight")-20;
-        $('#chatBox').animation({"scrollTop": $('#chatBox')[0].scrollHeight},'normal');
+        /*$('#chatBox').animate({"scrollTop": $('#chatBox')[0].scrollHeight},'normal');*/
         if(newHeight>oldHeight){
-            $('#chatBox').animation({scrollTop: newHeight},'normal');
+            $('#chatBox').animate({scrollTop: newHeight},'normal');
        }
     }
-    $('#chatBox').animation({"scrollTop": $('#chatBox')[0].scrollHeight},'normal');
+    /*$('#chatBox').animation({"scrollTop": $('#chatBox')[0].scrollHeight},'normal');*/
 });
 }
 
