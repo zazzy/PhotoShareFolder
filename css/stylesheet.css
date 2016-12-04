@@ -134,6 +134,7 @@ background-color: #E9F1F7;
 #content_container{
     width: 100%;
     height: auto;
+    padding: 3%;
 }
 
 #fullholder{
