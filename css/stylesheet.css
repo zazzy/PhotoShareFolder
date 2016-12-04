@@ -116,8 +116,19 @@ background-color: #E9F1F7;
     border-color: #777c80;
 }
 
-
-
+#home_container{
+    width: 100%;
+    height: auto;
+    display: inline-block;
+}
+#chat_container{
+    width: 40%;
+    height: auto;
+}
+#content_container{
+    width: 40%;
+    height: auto;
+}
 
 
 /* --------------media----------------- */
