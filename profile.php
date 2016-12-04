@@ -65,10 +65,11 @@ include("./db/uploads/uploadFile.php");
         echo "<div id = fullholder>";
     echo "<img id ='userImg' src=./".$image." alt=Name: ".$imageName." Desc: ".$imageDesc." User: ".$imageUID." Price: £".$imagePrice.">";
         echo "<div id = fullholderDetails>";
-        echo "Name: ".$imageName;
-        echo " Description: ".$imageDesc;
-        echo " User ID: " .$imageUID;
-        echo " Price: ".$imagePrice;
+        echo "<br>";
+        echo "Name: ".$imageName."<br>";
+        echo " Description: ".$imageDesc."<br>";
+        echo " User ID: " .$imageUID."<br>";
+        echo " Price: ".$imagePrice."<br>";
         echo "</div>";
         echo "</div>";
     }
