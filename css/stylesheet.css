@@ -139,11 +139,14 @@ background-color: #E9F1F7;
 #fullholder{
     width: 100%;
     heigh: 100%;
+    display: inline-block;
     float: left;
     border-style: ridge;
     border-color: #777c80;
     margin: 5px;
     background-color: #282A2C;
+    break-inside: avoid;
+    -webkit-column-break-inside: avoid;
 
 }
 #fullholderDetails{
