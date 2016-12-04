@@ -26,6 +26,7 @@ if(file_exists("log.html") && filesize("log.html")>0){
 
 
 <form name = "message" action ="">
+    <input type ="hidden" name="page" value="profile"/>
     <input name= "msg" type="text" id="msg"/>
     <input name ="submitmsg" type="submit" id="submitmsg" value="Send"/>
 </form>
