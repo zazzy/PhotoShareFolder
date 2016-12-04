@@ -76,11 +76,11 @@ include("./db/uploads/uploadFile.php");
             userImage.src=this.src;
             imageData.innerHTML=this.alt;
 
-        }
+        }/*
         var span = document.getElementsByClassName("close")[0];
         span.onclick=function(){
             holder.style.display="none";
-        }
+        }*/
     </script>
 
 <div id="myImageHolder" class="holder">
