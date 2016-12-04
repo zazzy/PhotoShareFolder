@@ -44,6 +44,9 @@ include("./db/uploads/uploadFile.php");
         </table>
     </form>
     </div>
+    <?
+    include("chat.php");
+    ?>
 
 </div>
 <section id ="photo_view">
