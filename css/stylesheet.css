@@ -134,13 +134,16 @@ background-color: #E9F1F7;
 }
 
 #fullholder{
-    width: auto;
+    width: 100%;
+    overflow: auto;
+    height:100%;
     float: left;
     background-color: green;
 }
 #fullholderDetails{
-    width: 100%;
-    height: auto;
+    width: 90%;
+    height: 80px;
+    margin: 5px;
     background-color: red;
 }
 
