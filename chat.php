@@ -39,8 +39,9 @@ if(file_exists("log.html") && filesize("log.html")>0){
 <script type ="text/javascript">
 
     setInterval(loadLog,2000);
-
+    <? echo "LOADLOG111"; ?>
 $("#submitmsg").click(function(){
+    <? echo "LOADLOG222"; ?>
     var userMsg = $('#msg').val();
     $.post("post.php",{text:userMsg});
     $("#msg").val("");
