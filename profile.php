@@ -70,7 +70,7 @@ include("./db/uploads/uploadFile.php");
         var holder = document.getElementById('myImageHolder');
         var image = document.getElementById('userImg');
         var userImage = document.getElementById('userImageHeld');
-        var imageData = document.getElementsById('myImageData');
+        var imageData = document.getElementById('myImageData');
         image.onclick = function(){
             holder.style.display="block";
             userImage.src=this.src;
