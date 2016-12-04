@@ -38,12 +38,12 @@ if(file_exists("log.html") && filesize("log.html")>0){
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script type ="text/javascript">
 
-    setInterval(loadLog,2000);
+
 
 $("#submitmsg").click(function(){
-    var userMsg = $('#msg').valueOf();
+    var userMsg = $('#msg').val();
     $.post("post.php",{text:userMsg});
-    $("#msg").attribute("value","");
+    $("#msg").attr("value","");
     $.ajax({
         type:'POST',
         url:'index.php',
@@ -52,15 +52,16 @@ $("#submitmsg").click(function(){
     return false;
 
 });
+setInterval(loadLog,2000);
 function loadLog(){
-    var oldHeight = $('#chatBox').attribute("scrollHeight")-20;
+    var oldHeight = $('#chatBox').attr("scrollHeight")-20;
 $.ajax({
     url:"log.html",
     cache:false,
     success:function(html){
         <? echo "logged"; ?>
         $("#chatBox").html(html);
-        var newHeight = $('chatBox').attribute("scrollHeight")-20;
+        var newHeight = $('chatBox').attr("scrollHeight")-20;
         if(newHeight>oldHeight){
             $('#chatBox').animation({scrollTop: newHeight},'normal');
         }
