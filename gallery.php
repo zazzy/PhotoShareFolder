@@ -33,15 +33,15 @@
         echo "<div id = fullholderDetails><table>";
 
         $imageInfo = exif_read_data("./".$image,"computed",false,false);
-/*
-        $imageInfo = array_values($imageInfo);*/
+
+        $imageInfoArray = array_values($imageInfo);*/
         echo "<tr><td>Name: ".$imageName."</td><tr>";
         echo "<tr><td>Desc: ".$imageDesc."</td><tr>";
 
         echo "<tr><td>User: " .$imageU."</td><tr>";
 
         echo "<tr><td>Price: ".$imagePrice."</td><tr>";
-        echo "<tr><td>Meta: ".$imageInfo."x".$imageInfo."</td></tr>";
+        echo "<tr><td>Meta: ".$imageInfoArray."x".$imageInfo."</td></tr>";
         echo "</table></div>";
         echo "</div>";
     }
