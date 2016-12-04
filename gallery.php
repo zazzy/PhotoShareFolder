@@ -34,14 +34,14 @@
 
         $imageInfo = exif_read_data("./".$image,"computed",true,false);
 
-
+        $imageInfo = array_values($imageInfo);
         echo "<tr><td>Name: ".$imageName."</td><tr>";
         echo "<tr><td>Desc: ".$imageDesc."</td><tr>";
 
         echo "<tr><td>User: " .$imageU."</td><tr>";
 
-        echo "<tr><td>Price: £".$imagePrice."</td><tr>";
-        echo "<tr><td>Meta: ".$imageInfo[0xa002]."x".$imageInfo['0xa002']."</td></tr>";
+        echo "<tr><td>Price: ".$imagePrice."</td><tr>";
+        echo "<tr><td>Meta: ".$imageInfo[3]."x".$imageInfo[4]."</td></tr>";
         echo "</table></div>";
         echo "</div>";
     }
