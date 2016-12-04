@@ -48,6 +48,8 @@ $("#submitmsg").click(function(){
         type:'POST',
         url:'index.php',
         data: 'page=profile'
+
+
     })
     return false;
 
@@ -58,14 +60,13 @@ function loadLog(){
 $.ajax({
     url:"log.html",
     cache:false,
-    success:function(html){
-        <? echo "logged"; ?>
+   /* success: function(){
         $("#chatBox").html(html);
         var newHeight = $('chatBox').attr("scrollHeight")-20;
         if(newHeight>oldHeight){
             $('#chatBox').animation({scrollTop: newHeight},'normal');
-        }
-    }
+       }
+    }*/
 });
 }
 
