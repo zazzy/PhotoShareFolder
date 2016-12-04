@@ -68,14 +68,15 @@ include("./db/uploads/uploadFile.php");
 ?>
 
 
+
+</section>
+</body>
 <div id="myImageHolder" class="holder">
     <span class="close" onclick="document.getElementById('myImageHolder').style.display='none'">&times;</span>
     <img class = "myImageHolderImage" id="userImageHeld">
     <div id="myImageData"></div>
 </div>
 
-</section>
-</body>
 </html>
     <script type="text/javascript">
         window.onload=function() {
