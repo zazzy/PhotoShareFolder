@@ -1,3 +1,8 @@
+<?
+session_start();
+error_reporting(E_ALL);
+ini_set('display_errors',1);
+?>
 <html>
 <head>
     <title>Chat Room</title>
@@ -22,13 +27,13 @@ if(file_exists("log.html") && filesize("log.html")>0){
 
 ?>
 
-
+    </div>
 <form name = "message" action ="">
     <input type ="hidden" name="page" value="profile"/>
     <input name= "msg" type="text" id="msg"/>
     <input name ="submitmsg" type="submit" id="submitmsg" value="Send"/>
 </form>
-</div>
+
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js"></script>
 <script type ="text/javascript">
 
