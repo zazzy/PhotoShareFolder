@@ -90,11 +90,11 @@ include("./db/uploads/uploadFile.php");
                 imageData.innerHTML = this.alt;
 
             }
-            /*
+
              var span = document.getElementsByClassName("close")[0];
              span.onclick=function(){
              holder.style.display="none";
-             }*/
+             }
         }
     </script>
 
