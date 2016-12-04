@@ -38,7 +38,7 @@ if(file_exists("log.html") && filesize("log.html")>0){
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script type ="text/javascript">
 
-
+    setInterval(loadLog,2000);
 
 $("#submitmsg").click(function(){
     var userMsg = $('#msg').val();
@@ -54,19 +54,20 @@ $("#submitmsg").click(function(){
     return false;
 
 });
-setInterval(loadLog,2000);
+
 function loadLog(){
     var oldHeight = $('#chatBox').attr("scrollHeight")-20;
+    <? echo "LOADLOG"; ?>
 $.ajax({
     url:"log.html",
     cache:false,
-   /* success: function(){
+    success: function(html){
         $("#chatBox").html(html);
         var newHeight = $('chatBox').attr("scrollHeight")-20;
         if(newHeight>oldHeight){
             $('#chatBox').animation({scrollTop: newHeight},'normal');
        }
-    }*/
+    }
 });
 }
 
