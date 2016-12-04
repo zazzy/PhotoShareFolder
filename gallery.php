@@ -36,13 +36,13 @@
 
 
         echo "<tr><td>Name: ".$imageName."</td><tr>";
-
+        echo "<tr><td>Meta: ".$imageInfo['Height']."x".$imageInfo['Width']."</td></tr>";
         echo "<tr><td>Desc: ".$imageDesc."</td><tr>";
 
         echo "<tr><td>User: " .$imageU."</td><tr>";
 
         echo "<tr><td>Price: £".$imagePrice."</td><tr>";
-        echo "<tr><td>Meta: ".$imageInfo['Height']."x".$imageInfo['Width']."</td>";
+        echo "<tr><td>Meta: ".$imageInfo['Height']."x".$imageInfo['Width']."</td></tr>";
         echo "</table></div>";
         echo "</div>";
     }
