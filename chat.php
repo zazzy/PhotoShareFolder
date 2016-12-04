@@ -70,6 +70,7 @@ $.ajax({
        }
     }
 });
+    chatDiv.scrollTop(chatDiv.prop("scrollHeight"));
 }
 
 
