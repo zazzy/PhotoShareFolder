@@ -22,7 +22,7 @@ if(file_exists("log.html") && filesize("log.html")>0){
 ?>
 
 
-<form name = "message" action ="profile.php">
+<form name = "message" action ="index.php/?page=profile">
     <input name= "msg" type="text" id="msg"/>
     <input name ="submitmsg" type="submit" id="submitmsg" value="Send"/>
 </form>
@@ -30,7 +30,7 @@ if(file_exists("log.html") && filesize("log.html")>0){
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js"></script>
 <script type ="text/javascript">
     setInterval(loadLog,2000);
-/*
+
 $("#submitmsg").click(function(){
     var userMsg = $('#msg').val();
     $.post("post.php",{text:userMsg});
@@ -53,7 +53,7 @@ $.ajax({
 });
 }
 
-*/
+
 
 </script>
 </body>
