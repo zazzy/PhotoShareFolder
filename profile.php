@@ -70,7 +70,7 @@ include("./db/uploads/uploadFile.php");
 
 
 
-        $imagePrice = $row['price'];
+        $imagePrice= $row['price'];
         echo "<div id = fullholder>";
         echo "<img id ='userImg' src=./".$image.">";
         echo "<div id = fullholderDetails><table>";
@@ -85,9 +85,23 @@ include("./db/uploads/uploadFile.php");
 
         echo "<tr><td>Price: ".$imagePrice."</td><tr>";
         echo "<tr><td>";
-        include("paypal.php");
+        ?>
+        <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
+    <input type="hidden" name="cmd" value="_s-xclick">
+    <input type="hidden" name="hosted_button_id" value="VG9AMTPN9467L">
+            <input type="hidden" name="amount" value="<?php echo $imagePrice; ?>">
+            <input type="hidden" name="item_name" value="<?php echo $imageDesc; ?>">
+    <input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_buynow_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+    <img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+<?
+
         echo "</td></tr>";
-        echo "<tr><td>Meta Size: ".$imageInfoArray[2]."</td></tr>";
+        if(isset($imageInfoArray[2])) {
+            echo "<tr><td>Meta Size: " . $imageInfoArray[2] . "</td></tr>";
+        }else{
+            echo "<tr><td>Image is not JPG</td></tr>";
+        }
         echo "</table></div>";
 
         echo "</div>";
