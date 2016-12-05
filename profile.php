@@ -50,7 +50,7 @@ include("./db/uploads/uploadFile.php");
 <section id ="photo_view">
     <?php
     include("./db/connect.php");
-
+    include("paypal.php");
     $PDO = new PDO($dsn,"b7716a5fb7c215","2471e43b096d840");
     $handler = $PDO->prepare("select * from image where user_id =".$_SESSION['id']);
 
@@ -84,7 +84,7 @@ include("./db/uploads/uploadFile.php");
         echo "<tr><td>User: " .$imageU."</td><tr>";
 
         echo "<tr><td>Price: ".$imagePrice."</td><tr>";
-        echo "<tr><td>".include("paypal.php")."</td><tr>";
+        echo "<tr><td> hello </td><tr>";
         echo "<tr><td>Meta Size: ".$imageInfoArray[2]."</td></tr>";
         echo "</table></div>";
         echo "</div>";
