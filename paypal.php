@@ -12,7 +12,7 @@
             env: 'production', // Optional: specify 'sandbox' environment
 
             client: {
-                sandbox:    'xxxxxxxxx',
+                sandbox:    'https://www.sandbox.paypal.com/checkoutnow?token=EC-60U79048BN7719609',
                 production: 'xxxxxxxxx'
             },
 
@@ -37,7 +37,7 @@
                 // Optional: display a confirmation page here
 
                 return actions.payment.execute().then(function() {
-                    // Show a success page to the buyer
+                    header('Location: index.php');
                 });
             }
 
