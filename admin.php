@@ -42,7 +42,7 @@ while($rows = mysqli_fetch_array($query)) {
 <td> </td>
 </tr>";
     if($rows['role']==5){
-        echo "User ".$rows['name']."requests phorographer status";
+        echo "User ".$rows['name']." requests phorographer status";
     }
 
 }
