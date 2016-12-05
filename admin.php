@@ -41,6 +41,10 @@ while($rows = mysqli_fetch_array($query)) {
 <tr>
 <td> </td>
 </tr>";
+    if($rows['role']==5){
+        echo "User requests phorographer status";
+    }
+
 }
 echo "</table>";
 echo "<form method='post' enctype='multipart/form-data'>";
