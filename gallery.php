@@ -15,16 +15,17 @@
     $userHandler = $PDO->prepare("select * from user");
     $userHandler->execute();
     $imageU = "UN";
+    $row2 = $userHandler->fetch(PDO::FETCH_ASSOC);
     while($row = $handler->fetch(PDO::FETCH_ASSOC)){
         $image=$row['imgurl'];
         $imageName = $row['file_name'];
         $imageDesc =$row['Description'];
 
-        while($row2 = $userHandler->fetch(PDO::FETCH_ASSOC)){
-            if($row2['id']==$row['user_id']){
-                $imageU =$row2['name'];
-            }}
 
+            if($row2['id']==$row['user_id']) {
+                $imageU = $row2['name'];
+
+            }
 
 
         $imagePrice = $row['price'];
