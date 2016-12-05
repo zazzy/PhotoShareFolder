@@ -101,10 +101,7 @@ include("./db/uploads/uploadFile.php");
         }else{
             echo "<tr><td>Image is not JPG</td></tr>";
         }
-        echo "</table></div>";
-
-        echo "</div>";
-        ?>
+        echo "<tr><tr>"?>
         <form name="_xclick" action="https://www.sandbox.paypal.com/uk/cgi-bin/webscr" method="post">
             <input type="hidden" name="cmd" value="_xclick">
             <input type="hidden" name="business" value="robertharrisjjus@hotmail.co.uk">
@@ -113,21 +110,18 @@ include("./db/uploads/uploadFile.php");
             <input type="hidden" name="amount" value="<?php echo $imagePrice; ?>">
             <input type="image" src="http://www.sandbox.paypal.com/en_GB/i/btn/x-click-but01.gif" border="0" name="submit" alt="Make payments with PayPal - it's fast, free and secure!">
         </form>
-        <!--
-        <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
-            <input type="hidden" name="cmd" value="_s-xclick">
-            <input type="hidden" name="hosted_button_id" value="NUNTL6W54KY9A">
-            <input type="hidden" name="amount" value="99.99">
-            <input type="hidden" name="item_name" value="">
-            <input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-            <img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
-        </form>-->
+    <? echo "</tr></td>";
 
-        <?
 
-    }
+        echo "</table></div>";
 
-?>
+        echo "</div>";
+
+
+
+    }?>
+
+
 
 
 
