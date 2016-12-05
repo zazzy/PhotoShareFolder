@@ -12,7 +12,7 @@
             env: 'production', // Optional: specify 'sandbox' environment
 
             client: {
-                sandbox:    'https://www.sandbox.paypal.com/checkoutnow?token=EC-60U79048BN7719609',
+                sandbox:    'https://www.sandbox.paypal.com/checkoutnow?token=EC-HYU6F8FDBFFD3GLD',
                 production: 'https://www.sandbox.paypal.com/checkoutnow?token=EC-HYU6F8FDBFFD3GLD'
             },
 
