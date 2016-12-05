@@ -55,7 +55,7 @@ session_start();
                 $_SESSION['username']=$username;
                 $_SESSION['id'] = $id;
                 $_SESSION['role']= $row['role'];
-                header("Location: http://photoshare1418132.azurewebsites.net/index.php?page=profile");
+                header("Location: http://photoshare1418132.azurewebsites.net/index.php?page=home");
             }
         }
     }

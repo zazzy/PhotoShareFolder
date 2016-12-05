@@ -15,7 +15,7 @@ include("./db/connect.php");
 <?php
 
 if(isset($_SESSION['id'])){
-if($_SESSION['id']=="1"){
+if($_SESSION['role']=="1"){
 
 
 
