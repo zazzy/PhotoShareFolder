@@ -5,7 +5,7 @@ ini_set('display_errors',1);
 
 if(isset($_POST['usubmit'])&&$_FILES['photoupload']['size']>0) {
     $allowed_extension = array("image/jpeg","image/jpg");
-    echo "FIRST IF PASS";
+
     if (!in_array($_FILES['photoupload']['type'], $allowed_extension)) {
         echo "Invalid file type, JPG or PNG only " . $_FILES['photoupload']['type'];
     } else {
@@ -36,7 +36,7 @@ if(isset($_POST['usubmit'])&&$_FILES['photoupload']['size']>0) {
             $upload_image = $folder.basename($_FILES['photoupload']["name"]);
             /* try to move file PLEASSSEEE WORK */
             if(move_uploaded_file($fileTempName,$upload_image)) {
-                echo "File uploaded";
+                echo " File uploaded";
 
                 $query = "insert into image(user_id,file_name,Description,price,imgurl)" .
                     "values('$fileUserID','$fileName','$fileDescription','$filePrice','$upload_image')";
@@ -52,7 +52,7 @@ if(isset($_POST['usubmit'])&&$_FILES['photoupload']['size']>0) {
                 fclose($handle);
                 */
 
-                echo "File uploaded";
+
                 /*mysql_query($query);*/
 
             }

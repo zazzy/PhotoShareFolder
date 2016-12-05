@@ -18,10 +18,15 @@
                 <td><input type = "password" name ="password"/></td>
             </tr>
 
-            <tr>
-                <td>Confirm Password</td>
-                <td><input type = "password" name ="confirm_password"/></td>
-            </tr>
+        <tr>
+            <td>Confirm Password</td>
+            <td><input type = "password" name ="confirm_password"/></td>
+        </tr>
+        <tr>
+            <td>Would you like to be a Photographer?</td>
+            <td>Yes <input type = "radio" name ="radiocheck" value="Yes"/></td>
+            <td>No <input type = "radio" name ="radiocheck" value="No" checked/></td>
+        </tr>
 
             <tr>
                 <td><input type = "submit" name ="submit" value="Submit"/></td>

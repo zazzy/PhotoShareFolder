@@ -26,7 +26,11 @@ session_start();
         $username = strip_tags($username);
         $username = stripslashes($username);
         $username = mysqli_real_escape_string($db,$username);
-
+        if($_POST['radiocheck']=="Yes"){
+            $radioChoice = 5;
+        }else{
+            $radioChoice =0;
+        }
         $password = strip_tags($password);
         $password = stripslashes($password);
         $password = mysqli_real_escape_string($db,$password);
@@ -40,8 +44,8 @@ session_start();
         }elseif ($password!=$confirmpassword){
             echo "Password match error!";
         }else{
-            $sql ="insert into user(name,password)
-            values ('$username','$password')";
+            $sql ="insert into user(name,password,role)
+            values ('$username','$password','$radioChoice')";
             $query=mysqli_query($db,$sql);
             if(!$query){
                 printf("DEAD1: %s\n", mysqli_error($db));
