@@ -74,8 +74,11 @@ include("./db/uploads/uploadFile.php");
         echo "<div id = fullholder>";
         echo "<img id ='userImg' src=./".$image.">";
         echo "<div id = fullholderDetails><table>";
-
-        $imageInfo = exif_read_data("./".$image,"computed",false,false);
+        try {
+            $imageInfo = exif_read_data("./" . $image, "computed", false, false);
+        }catch (Exception $e){
+            $imageInfo=null;
+        }
         if(isset($imageInfo)) {
             $imageInfoArray = array_values($imageInfo);
         }else{
