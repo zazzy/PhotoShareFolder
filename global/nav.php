@@ -14,7 +14,7 @@ session_start();
         ';
     }
     if(isset($_SESSION['id'])){
-        if($_SESSION['role']!="10" || $_SESSION['role']!="0"){
+        if($_SESSION['role']!="10" || $_SESSION['role']!="0" || $_SESSION['role']!="5"){
     echo '<li><a href="?page=profile">Profile</a></li>';
         }
         echo'<li><a href="?page=logout">Logout</a></li>';
