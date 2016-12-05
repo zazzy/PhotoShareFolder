@@ -81,20 +81,11 @@ include("./db/uploads/uploadFile.php");
         echo "<tr><td>Name: ".$imageName."</td><tr>";
         echo "<tr><td>Desc: ".$imageDesc."</td><tr>";
 
-        echo "<tr><td>User:" .$imageU."</td><tr>";
+        echo "<tr><td>User: " .$imageU."</td><tr>";
 
         echo "<tr><td>Price: ".$imagePrice."</td><tr>";
         echo "<tr><td>";
-        ?>
-        <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
-    <input type="hidden" name="cmd" value="_s-xclick">
-    <input type="hidden" name="hosted_button_id" value="VG9AMTPN9467L">
-            <input type="hidden" name="amount" value="<?php echo $imagePrice; ?>">
-            <input type="hidden" name="item_name" value="99">
-    <input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_buynow_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-    <img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
-</form>
-<?
+
 
         echo "</td></tr>";
         if(isset($imageInfoArray)) {
@@ -105,6 +96,18 @@ include("./db/uploads/uploadFile.php");
         echo "</table></div>";
 
         echo "</div>";
+
+
+        ?>
+        <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
+            <input type="hidden" name="cmd" value="_s-xclick">
+            <input type="hidden" name="hosted_button_id" value="VG9AMTPN9467L">
+            <input type="hidden" name="amount" value="<?php echo $imagePrice; ?>">
+            <input type="hidden" name="item_name" value="99">
+            <input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_buynow_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+            <img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+        </form>
+        <?
     }
 
 ?>
