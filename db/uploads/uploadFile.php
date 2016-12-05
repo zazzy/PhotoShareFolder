@@ -4,7 +4,7 @@ ini_set('display_errors',1);
 
 
 if(isset($_POST['usubmit'])&&$_FILES['photoupload']['size']>0) {
-    $allowed_extension = array("image/png", "image/jpeg","image/jpg");
+    $allowed_extension = array("image/jpeg","image/jpg");
     echo "FIRST IF PASS";
     if (!in_array($_FILES['photoupload']['type'], $allowed_extension)) {
         echo "Invalid file type, JPG or PNG only " . $_FILES['photoupload']['type'];
