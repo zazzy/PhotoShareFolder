@@ -81,7 +81,7 @@ include("./db/uploads/uploadFile.php");
         echo "<tr><td>Name: ".$imageName."</td><tr>";
         echo "<tr><td>Desc: ".$imageDesc."</td><tr>";
 
-        echo "<tr><td>User: " .$imageU."</td><tr>";
+        echo "<tr><td>User:" .$imageU."</td><tr>";
 
         echo "<tr><td>Price: ".$imagePrice."</td><tr>";
         echo "<tr><td>";
