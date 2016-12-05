@@ -108,7 +108,7 @@ include("./db/uploads/uploadFile.php");
         <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
             <input type="hidden" name="cmd" value="_s-xclick">
             <input type="hidden" name="business" value="robertharrisjjus@hotmail.co.uk">
-            <input type="hidden" name="amount" value="99">
+            <input type="hidden" name="amount" value="99.99">
             <input type="hidden" name="currency_code" value="GBP">
             <input type="hidden" name="item_name" value="<?php echo $imageDesc; ?>">
             <input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_buynow_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
