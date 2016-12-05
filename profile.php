@@ -7,6 +7,7 @@ ini_set('display_errors',1);
 /* fucked fix me lol */
 include("./db/connect.php");
 include("./db/uploads/uploadFile.php");
+if(isset($_SESSION['id'])){
 ?>
 <!DOCTYPE html>
 <html>
@@ -14,7 +15,7 @@ include("./db/uploads/uploadFile.php");
 <body>
 <div id ="profile_details">
     <h3><?php
-if(isset($_SESSION['id'])){
+
 
         if(isset($_SESSION['username'])){
             echo ucfirst(strtolower($_SESSION['username'])).'\'s Gallery';
