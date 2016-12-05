@@ -105,7 +105,7 @@ include("./db/uploads/uploadFile.php");
 
         echo "</div>";
         ?>
-        <form name="_xclick" action="https://www.paypal.com/uk/cgi-bin/webscr" method="post">
+        <form name="_xclick" action="https://www.sandbox.paypal.com/uk/cgi-bin/webscr" method="post">
             <input type="hidden" name="cmd" value="_xclick">
             <input type="hidden" name="business" value="robertharrisjjus@hotmail.co.uk">
             <input type="hidden" name="currency_code" value="GBP">
