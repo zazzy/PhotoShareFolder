@@ -76,8 +76,11 @@ include("./db/uploads/uploadFile.php");
         echo "<div id = fullholderDetails><table>";
 
         $imageInfo = exif_read_data("./".$image,"computed",false,false);
-
-        $imageInfoArray = array_values($imageInfo);
+        if(isset($imageInfo)) {
+            $imageInfoArray = array_values($imageInfo);
+        }else{
+            $imageInfoArray=null;
+        }
         echo "<tr><td>Name: ".$imageName."</td><tr>";
         echo "<tr><td>Desc: ".$imageDesc."</td><tr>";
 
