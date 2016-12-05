@@ -106,7 +106,7 @@ include("./db/uploads/uploadFile.php");
         echo "</div>";
         ?>
         <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
-            <input type="hidden" name="cmd" value="_xclick">
+            <input type="hidden" name="cmd" value="_s-xclick">
             <input type="hidden" name="hosted_button_id" value="VG9AMTPN9467L">
             <input type="hidden" name="amount" value="99">
             <input type="hidden" name="item_name" value="<?php echo $imageDesc; ?>">
