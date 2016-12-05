@@ -19,9 +19,22 @@ session_start();
     $salt = "1238ImTheBoy23o";
 
     if(isset($_POST['submit'])) {
+
+
         $username =$_POST['username'];
         $password =md5($_POST['password'].$salt);
+        $username = strip_tags($username);
+        $username = stripslashes($username);
+        $username = mysqli_real_escape_string($db,$username);
+
+        $password = strip_tags($password);
+        $password = stripslashes($password);
+        $password = mysqli_real_escape_string($db,$password);
+
         $confirmpassword =md5($_POST['confirm_password'].$salt);
+        $confirmpassword = strip_tags($confirmpassword);
+        $confirmpassword = stripslashes($confirmpassword);
+        $confirmpassword = mysqli_real_escape_string($db,$confirmpassword);
         if(empty($username)||empty($password)||empty($confirmpassword)) {
             echo "Empty Field!";
         }elseif ($password!=$confirmpassword){

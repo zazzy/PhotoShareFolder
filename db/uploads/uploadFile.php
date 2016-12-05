@@ -23,6 +23,16 @@ if(isset($_POST['usubmit'])&&$_FILES['photoupload']['size']>0) {
             $fileUserID = $_SESSION['id'];
             $fileTempName = $_FILES['photoupload']['tmp_name'];
 
+        $fileName = strip_tags($fileName);
+        $fileName = stripslashes($fileName);
+        $fileName = mysqli_real_escape_string($db,$fileName);
+
+        $fileDescription = strip_tags($fileDescription);
+        $fileDescription = stripslashes($fileDescription);
+        $fileDescription = mysqli_real_escape_string($db,$fileDescription);
+
+
+
             $upload_image = $folder.basename($_FILES['photoupload']["name"]);
             /* try to move file PLEASSSEEE WORK */
             if(move_uploaded_file($fileTempName,$upload_image)) {
