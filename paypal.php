@@ -13,7 +13,7 @@
 
             client: {
                 sandbox:    'https://www.sandbox.paypal.com/checkoutnow?token=EC-60U79048BN7719609',
-                production: 'xxxxxxxxx'
+                production: 'https://www.sandbox.paypal.com/checkoutnow?token=EC-HYU6F8FDBFFD3GLD'
             },
 
             payment: function() {
