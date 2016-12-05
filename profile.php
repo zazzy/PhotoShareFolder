@@ -8,7 +8,7 @@ ini_set('display_errors',1);
 include("./db/connect.php");
 include("./db/uploads/uploadFile.php");
 if(isset($_SESSION['id'])){
-    if($_SESSION['role']!="0"){
+    if($_SESSION['role']!="0" || $_SESSION['role']!="5"){
 ?>
 <!DOCTYPE html>
 <html>
