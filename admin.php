@@ -14,6 +14,11 @@ include("./db/connect.php");
 
 <?php
 
+if(isset($_SESSION['id'])){
+if($_SESSION['id']=="1"){
+
+
+
 
 $query = mysqli_query($db,"select * from user");
 
@@ -62,7 +67,8 @@ if(isset($_POST["usertoban"])){
     mysqli_query($db,"update user set role=".$_POST['changeid']." where id=".$user);
     header("refresh:1");
 }
-
+}
+}
 
 ?>
 

@@ -25,26 +25,56 @@
 
 
 
-        $imagePrice = $row['price'];
+        $imagePrice= $row['price'];
         echo "<div id = fullholder>";
         echo "<img id ='userImg' src=./".$image.">";
         echo "<div id = fullholderDetails><table>";
-
-        $imageInfo = exif_read_data("./".$image,"computed",false,false);
-
-        $imageInfoArray = array_values($imageInfo);
+        try {
+            $imageInfo = exif_read_data("./" . $image, "computed", false, false);
+        }catch (Exception $e){
+            $imageInfo=null;
+        }
+        if(isset($imageInfo)) {
+            $imageInfoArray = array_values($imageInfo);
+        }else{
+            $imageInfoArray=null;
+        }
         echo "<tr><td>Name: ".$imageName."</td><tr>";
-        echo "<tr><td>Desc: ".$imageDesc."</td><tr>";
 
         echo "<tr><td>User: " .$imageU."</td><tr>";
 
         echo "<tr><td>Price: ".$imagePrice."</td><tr>";
-        echo "<tr><td>Meta Size: ".$imageInfoArray[2]."</td></tr>";
-        echo "</table></div>";
-        echo "</div>";
-    }
+        echo "<tr><td>";
 
-    ?>
+
+        echo "</td></tr>";
+        if(isset($imageInfoArray)) {
+            echo "<tr><td>Meta Size: " . $imageInfoArray[2] . "</td></tr>";
+        }else{
+            echo "<tr><td>Image is not JPG</td></tr>";
+        }
+        echo "<tr><tr>"?>
+        <form name="_xclick" action="https://www.sandbox.paypal.com/uk/cgi-bin/webscr" method="post">
+            <input type="hidden" name="cmd" value="_xclick">
+            <input type="hidden" name="business" value="robertharrisjjus@hotmail.co.uk">
+            <input type="hidden" name="currency_code" value="GBP">
+            <input type="hidden" name="item_name" value="<?php echo $imageDesc; ?>">
+            <input type="hidden" name="amount" value="<?php echo $imagePrice; ?>">
+            <input type="image" src="http://www.sandbox.paypal.com/en_GB/i/btn/x-click-but01.gif" border="0" name="submit" alt="Make payments with PayPal - it's fast, free and secure!">
+        </form>
+        <? echo "</tr></td>";
+
+
+        echo "</table></div>";
+
+        echo "</div>";
+
+
+
+    }?>
+
+
+
 
 
 
