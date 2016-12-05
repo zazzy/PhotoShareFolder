@@ -87,7 +87,6 @@ include("./db/uploads/uploadFile.php");
             $imageInfoArray=null;
         }
         echo "<tr><td>Name: ".$imageName."</td><tr>";
-        echo "<tr><td>Desc: ".$imageDesc."</td><tr>";
 
         echo "<tr><td>User: " .$imageU."</td><tr>";
 
