@@ -110,8 +110,8 @@ include("./db/uploads/uploadFile.php");
             <input type="hidden" name="business" value="robertharrisjjus@hotmail.co.uk">
             <input type="hidden" name="currency_code" value="GBP">
             <input type="hidden" name="item_name" value="<?php echo $imageDesc; ?>">
-            <input type="hidden" name="amount" value="12.99">
-            <input type="image" src="http://www.paypal.com/en_GB/i/btn/x-click-but01.gif" border="0" name="submit" alt="Make payments with PayPal - it's fast, free and secure!">
+            <input type="hidden" name="amount" value="<?php echo $imagePrice; ?>">
+            <input type="image" src="http://www.sandbox.paypal.com/en_GB/i/btn/x-click-but01.gif" border="0" name="submit" alt="Make payments with PayPal - it's fast, free and secure!">
         </form>
         <!--
         <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
