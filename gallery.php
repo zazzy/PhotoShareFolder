@@ -9,7 +9,7 @@
     include("./db/connect.php");
 
     $PDO = new PDO($dsn,"b7716a5fb7c215","2471e43b096d840");
-    $handler = $PDO->prepare("select * from image");
+    $handler = $PDO->prepare("select * from image ti INNER JOIN user ut on ti.user_id = ut.id");
 
     $handler->execute();
     $userHandler = $PDO->prepare("select * from user");
@@ -20,12 +20,9 @@
         $image=$row['imgurl'];
         $imageName = $row['file_name'];
         $imageDesc =$row['Description'];
+        $imageU = $row['name'];
 
 
-            if($row2['id']==$row['user_id']) {
-                $imageU = $row2['name'];
-
-            }
 
 
         $imagePrice = $row['price'];
