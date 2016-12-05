@@ -13,7 +13,10 @@ include("./db/uploads/uploadFile.php");
 <head><title>PhotoShare - Profile</title></head>
 <body>
 <div id ="profile_details">
-    <h3><?php if(isset($_SESSION['username'])){
+    <h3><?php
+if(isset($_SESSION['id'])){
+
+        if(isset($_SESSION['username'])){
             echo ucfirst(strtolower($_SESSION['username'])).'\'s Gallery';
         }else {
             echo "Username";
@@ -118,7 +121,7 @@ include("./db/uploads/uploadFile.php");
 
 
 
-    }?>
+    }}?>
 
 
 
