@@ -17,9 +17,9 @@ if($_SESSION['role']!="0"){
 
 <?php
 
-if(file_exists("log.html") && filesize("log.html")>0){
-    $handle = fopen("log.html","r");
-    $contents = fread($handle,filesize("log.html"));
+if(file_exists("Newlog.html") && filesize("Newlog.html")>0){
+    $handle = fopen("Newlog.html","r");
+    $contents = fread($handle,filesize("Newlog.html"));
     fclose($handle);
 
     echo $contents;
@@ -62,7 +62,7 @@ function loadLog(){
     chatDiv.animate({scrollTop: chatDiv.prop("scrollHeight")},1000);
 $.ajax({
 
-    url:"log.html",
+    url:"Newlog.html",
     cache:false,
     success: function(html){
         chatDiv.html(html);
