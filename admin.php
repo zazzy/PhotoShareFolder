@@ -1,8 +1,6 @@
 <?php
 
 session_start();
-error_reporting(E_ALL);
-ini_set('display_errors',1);
 include("./db/connect.php");
 
 ?>
@@ -36,14 +34,12 @@ while($rows = mysqli_fetch_array($query)) {
 
 <tr>
 <td> Role: </td>
-<td> ".$rows['role']." </td>
+<td> ".$rows['role']." (5=photographer request)</td>
 </tr>
 <tr>
 <td> </td>
 </tr>";
-    if($rows['role']==5){
-        echo "User ".$rows['name']." requests phorographer status";
-    }
+
 
 }
 echo "</table>";

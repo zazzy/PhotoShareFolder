@@ -11,16 +11,16 @@
 
             <tr>
                 <td>Username</td>
-                <td><input type = "text" name ="username"/></td>
+                <td><input type = "text" name ="username" maxlength="20"/></td>
             </tr>
             <tr>
                 <td>Password</td>
-                <td><input type = "password" name ="password"/></td>
+                <td><input type = "password" name ="password" maxlength="15"/></td>
             </tr>
 
         <tr>
             <td>Confirm Password</td>
-            <td><input type = "password" name ="confirm_password"/></td>
+            <td><input type = "password" name ="confirm_password" maxlength="15"/></td>
         </tr>
         <tr>
             <td>Would you like to be a Photographer?</td>

@@ -29,11 +29,11 @@ if(isset($_SESSION['id'])){
         <table id ="upload_table">
             <tr>
                 <td>Upload Name</td>
-                <td><input type = "text" name ="upload_name"/></td>
+                <td><input type = "text" name ="upload_name" maxlength="30"/></td>
             </tr>
             <tr>
                 <td>Upload Description</td>
-                <td><input type = "text" name ="upload_description"/></td>
+                <td><input type = "text" name ="upload_description" maxlength="20"/></td>
             </tr>
             <tr>
                 <td>Price</td>

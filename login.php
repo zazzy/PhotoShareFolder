@@ -50,11 +50,11 @@ if(isset($_POST['login'])) {
     <table>
         <tr>
             <td>Username: </td>
-    <td><input placeholder="Username" name="username" type="text" autofocus></td>
+    <td><input placeholder="Username" name="username" type="text" autofocus maxlength="20"></td>
         </tr>
             <tr>
                 <td>Password: </td>
-            <td><input placeholder="Password" name="password" type="password" autofocus></td>
+            <td><input placeholder="Password" name="password" type="password" maxlength="15" autofocus></td>
             </tr>
             <tr>
             <td><input name="login" type="submit" autofocus></td>
