@@ -11,7 +11,7 @@ header('Content-type: text/javascript');
 function getAllUsers()
 {
     global $db;
-    $user_sql = mysqli_query($db, "select name from USER");
+    $user_sql = mysqli_query($db, "select name,role,id from USER");
     $users = array();
 
     while ($row = mysqli_fetch_assoc($user_sql)) {
@@ -21,11 +21,11 @@ function getAllUsers()
 
 }
 
-function getAUsers()
+function getAUser()
 {
     $UN = $_GET['user'];
     global $db;
-    $user_sql = mysqli_query($db, "select * from USER where name ='$UN'");
+    $user_sql = mysqli_query($db, "select name,role,id from USER where name ='$UN'");
     $users = array();
 
     while ($row = mysqli_fetch_assoc($user_sql)) {
