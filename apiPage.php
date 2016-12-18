@@ -9,6 +9,7 @@
 
         $.ajax({
             type: 'GET',
+            dataType: 'json',
             url: 'http://photoshare1418132.azurewebsites.net/api.php?method=getAllUsers',
             success: function (data) {
                 for(person in data){
