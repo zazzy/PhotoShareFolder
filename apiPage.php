@@ -9,7 +9,7 @@
 
         $.ajax({
             type: 'GET',
-            url: 'http://photoshare1418132.azurewebsites.net/api.php?method=getAllUsers',
+            url: 'http://photoshare1418132.azurewebsites.net/api.php?method=getAllUsers&jasoncallback=?',
             success: function (data) {
                 for(person in data){
                     var users = data[person];
