@@ -8,10 +8,7 @@
             type: 'GET',
             url: 'http://photoshare1418132.azurewebsites.net/api.php?method=getAllUsers',
             success: function (data) {
-                for(users in data){
-                    var allUsers = data[users];
-                    console.log(allUsers)
-                }
+                console.log(data)
                 //  console.dir('success', data);
             }
         })
