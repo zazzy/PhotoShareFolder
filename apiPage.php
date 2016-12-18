@@ -9,10 +9,10 @@
 
         $.ajax({
             type: 'GET',
-            url: 'http://photoshare1418132.azurewebsites.net/api.php?method=getAllUsers&jsoncallback=?',
+            url: 'http://photoshare1418132.azurewebsites.net/api.php?method=getAllUsers',
             success: function (data) {
                 for(person in data){
-                    var user = data[person]
+                    var user = data[person];
                     console.log(user)
                 }
                 //  console.dir('success', data);
