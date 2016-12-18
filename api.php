@@ -25,11 +25,13 @@ function getAllUsers(){
     <title>API</title>
 </head>
 <body>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
 <script>
-    function(){
+    $(function(){
         $.getJSON("http://photoshare1418132.azurewebsites.net/api.php?method=getAllUsers&jsoncallback=?");
-    }
+        })
+
 </script>
 
 
