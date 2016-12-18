@@ -9,14 +9,13 @@
 
         $.ajax({
             type: 'GET',
-            url: 'http://photoshare1418132.azurewebsites.net/api.php?method=getAllUsers&jasoncallback=?',
+            url: 'http://photoshare1418132.azurewebsites.net/api.php?method=getAllUsers&jsoncallback=?',
             success: function (data) {
                 for(person in data){
-                    var users = data[person];
-                    console.log(users)
-
+                    var user = data[person]
+                    console.log(user)
                 }
-                //  ????
+                //  console.dir('success', data);
             }
         })
     });

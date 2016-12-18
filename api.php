@@ -19,5 +19,5 @@ function getAllUsers(){
     $users = json_encode($users);
     echo $_GET['jsoncallback'] . '(' . $users . ')';
 }
-?>
+
 
