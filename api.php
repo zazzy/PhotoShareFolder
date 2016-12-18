@@ -16,8 +16,8 @@ function getAllUsers(){
     while($singleUser = mysqli_fetch_array($user_sql)){
         $users[] = $singleUser;
     }
-    //$users = json_encode($users);
-    //echo $_GET[$users];
+    $users = json_encode($users);
     echo $_GET['jsoncallback'] . '(' . $users . ')';
 }
+?>
 
