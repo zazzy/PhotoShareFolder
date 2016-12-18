@@ -33,7 +33,11 @@ function getAllUsers(){
             type: 'GET',
             url: 'http://photoshare1418132.azurewebsites.net/api.php?method=getAllUsers&jsoncallback=?',
             success: function (data) {
-                console.dir('success', data);
+                for(person in data){
+                    var user = data[person]
+                    console.log(user.name)
+                }
+              //  console.dir('success', data);
             }
             })
         });
