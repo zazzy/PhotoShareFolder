@@ -28,9 +28,14 @@ function getAllUsers(){
 
 <script>
     $(function(){
-        $.getJSON("http://photoshare1418132.azurewebsites.net/api.php?method=getAllUsers&jsoncallback=?")
+        $.getJSON("http://photoshare1418132.azurewebsites.net/api.php?method=getAllUsers&jsoncallback=?");
+        function(data){
+            for($person in data){
+                var user = data[aUser];
+                console.log($person.name);
+            }
+        }
 
-        )
     });
 </script>
 
