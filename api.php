@@ -29,7 +29,7 @@ function getAllUsers(){
 <script>
     function(){
         $.getJSON("http://photoshare1418132.azurewebsites.net/api.php?method=getAllUsers&jsoncallback=?");
-    };
+    }
 </script>
 
 
