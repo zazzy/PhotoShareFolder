@@ -18,7 +18,7 @@ function getAllUsers()
         $users[] = $row;
     }
 
-    echo json_encode($users, JSON_PRETTY_PRINT, JSON_FORCE_OBJECT);
+    echo json_encode($users, JSON_FORCE_OBJECT);
 
 }
 
