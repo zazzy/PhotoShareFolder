@@ -13,11 +13,14 @@ function getAllUsers(){
     $user_sql = mysqli_query($db,"select * from USER");
     $users = array();
 
-    while($singleUser = mysqli_fetch_array($user_sql)){
-        $users[] = $singleUser;
+    while($row = mysqli_fetch_assoc($user_sql)){
+        $users[] = $row;
     }
-    $users = json_encode($users);
-    echo $_GET['jsoncallback'] . '(' . $users . ')';
+    echo json_encode($users);
+    //
+    //
+    ///$users = json_encode($users);
+    //echo $_GET['jsoncallback'] . '(' . $users . ')';
 }
 
 
