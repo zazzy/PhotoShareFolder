@@ -17,7 +17,8 @@ function getAllUsers()
     while ($row = mysqli_fetch_assoc($user_sql)) {
         $users[] = $row;
     }
-    echo json_encode($users, JSON_PRETTY_PRINT);
+
+    echo json_encode($users, JSON_PRETTY_PRINT, JSON_FORCE_OBJECT);
 
 }
 
@@ -31,7 +32,7 @@ function getAUser()
     while ($row = mysqli_fetch_assoc($user_sql)) {
         $users[] = $row;
     }
-    echo json_encode(mysqli_fetch_assoc($user_sql), JSON_PRETTY_PRINT);
+    echo json_encode($users, JSON_PRETTY_PRINT,JSON_FORCE_OBJECT);
 
 }
 
@@ -44,7 +45,7 @@ function getAllImages()
     while ($row = mysqli_fetch_assoc($user_sql)) {
         $users[] = $row;
     }
-    echo json_encode($users, JSON_PRETTY_PRINT);
+    echo json_encode($users, JSON_PRETTY_PRINT,JSON_FORCE_OBJECT);
 
 }
 
