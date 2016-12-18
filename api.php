@@ -28,10 +28,16 @@ function getAllUsers(){
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script type ="text/javascript">
     $(function(){
-        $.getJSON("http://photoshare1418132.azurewebsites.net/api.php?method=getAllUsers&jsoncallback=?");
-            function(data){
-                console.log(data);
-            }
+
+        $.ajax({
+            type: 'GET',
+            url: 'http://photoshare1418132.azurewebsites.net/api.php?method=getAllUsers&jsoncallback=?',
+            success: function (data) {
+                console.log('success',data);
+            })
+        });
+        //$.getJSON("http://photoshare1418132.azurewebsites.net/api.php?method=getAllUsers&jsoncallback=?");
+
         })
 
 </script>
