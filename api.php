@@ -90,7 +90,29 @@ function getAllImagesObj()
 
 }
 
+function getAImage()
+{
+$UN = $_GET['img'];
+global $db;
+$user_sql = mysqli_query($db, "select user_id,file_name,Description,price from image where file_name ='$UN'");
+$users = array();
 
+while ($row = mysqli_fetch_assoc($user_sql)) {
+    $users[] = $row;
+}
+echo json_encode($users, JSON_PRETTY_PRINT);
+
+function getAImageObj()
+{
+$UN = $_GET['img'];
+global $db;
+$user_sql = mysqli_query($db, "select user_id,file_name,Description,price from image where file_name ='$UN'");
+$users = array();
+
+while ($row = mysqli_fetch_assoc($user_sql)) {
+    $users[] = $row;
+}
+echo json_encode($users, JSON_FORCE_OBJECT);
 
 ?>
 
