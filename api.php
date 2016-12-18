@@ -33,7 +33,7 @@ function getAllUsers(){
             type: 'GET',
             url: 'http://photoshare1418132.azurewebsites.net/api.php?method=getAllUsers&jsoncallback=?',
             success: function (data) {
-                for(person in data){
+                for(person in $.parseJSON(data)){
                     var user = data[person]
                     console.log(user)
                 }
