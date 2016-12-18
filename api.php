@@ -1,6 +1,5 @@
 <?php
 include("db/connect.php");
-include("apiPage.php");
 header('Content-type: text/javascript');
 
 
