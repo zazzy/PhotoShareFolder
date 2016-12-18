@@ -35,7 +35,7 @@ function getAllUsers(){
                 console.log(person.name + "" + person.role)
             }
         }
-        )
+        );
     });
 </script>
 
