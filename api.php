@@ -11,14 +11,43 @@ header('Content-type: text/javascript');
 function getAllUsers()
 {
     global $db;
-    $user_sql = mysqli_query($db, "select * from USER");
+    $user_sql = mysqli_query($db, "select name from USER");
     $users = array();
 
     while ($row = mysqli_fetch_assoc($user_sql)) {
         $users[] = $row;
     }
     echo json_encode($users, JSON_PRETTY_PRINT);
+
 }
+
+function getAUsers()
+{
+    $UN = $_GET['user'];
+    global $db;
+    $user_sql = mysqli_query($db, "select * from USER where name ='$UN'");
+    $users = array();
+
+    while ($row = mysqli_fetch_assoc($user_sql)) {
+        $users[] = $row;
+    }
+    echo json_encode($users, JSON_PRETTY_PRINT);
+
+}
+
+function getAllImages()
+{
+    global $db;
+    $user_sql = mysqli_query($db, "select file_name,Description from image");
+    $users = array();
+
+    while ($row = mysqli_fetch_assoc($user_sql)) {
+        $users[] = $row;
+    }
+    echo json_encode($users, JSON_PRETTY_PRINT);
+
+}
+
 
 
 ?>
