@@ -24,11 +24,13 @@ function getAllUsers()
 }
 
 function parseJsonAllUsers(){
-        $position =$_GET['position'];
+    $position =$_GET['position'];
+    $field =$_GET['field'];
     $req = file_get_contents('http://photoshare1418132.azurewebsites.net/api.php?method=getAllusers');
     $myDecode = json_decode($req,true);
     echo $position;
-    var_dump($myDecode[$position]['name']);
+    echo $field;
+    var_dump($myDecode[$position][$field]);
 }
 
 function getAUser()
