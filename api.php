@@ -29,9 +29,12 @@ function parseJson(){
     $myDecode = json_decode($req,true);
 
     echo $myDecode['name'];
+    var_dump($myDecode[0]);
+    var_dump($myDecode['name']);
     var_dump($myDecode['name']);
     var_dump($myDecode);
-    echo'test3';
+    echo'test4';
+    var_dump($myDecode[0]['name']);
 }
 
 function getAUser()
