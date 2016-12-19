@@ -19,7 +19,9 @@ function getAllUsers()
     }
     $myJson = json_encode($users, JSON_PRETTY_PRINT);
     echo $myJson;
-    $myDecode = json_decode($myJson,true);
+    $req = file_get_contents('http://photoshare1418132.azurewebsites.net/api.php?method=getAllusers');
+
+    $myDecode = json_decode($req,true);
 
     echo $myDecode['name'];
     var_dump($myDecode['name']);
