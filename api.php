@@ -20,9 +20,10 @@ function getAllUsers()
     $myJson = json_encode($users, JSON_PRETTY_PRINT);
     echo $myJson;
     $myDecode = json_decode($myJson,true);
-    echo $myDecode->{'name'};
+
     echo $myDecode['name'];
-    echo'test';
+    var_dump($myDecode['name']);
+    echo'test2';
 
 }
 
