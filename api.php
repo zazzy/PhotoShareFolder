@@ -30,6 +30,7 @@ function parseJson(){
 
     echo $myDecode['name'];
     var_dump($myDecode['name']);
+    var_dump($myDecode);
     echo'test3';
 }
 
