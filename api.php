@@ -47,12 +47,20 @@ function getAllImages()
 }
 
 function parseJsonAllImages(){
-    $position =$_GET['position'];
-    $field =$_GET['field'];
-    $req = file_get_contents('http://photoshare1418132.azurewebsites.net/api.php?method=getAllImages');
-    $myDecode = json_decode($req,true);
+    if(isset($_GET['position']) && isset($_GET['field'])) {
+        $position = $_GET['position'];
+        $field = $_GET['field'];
+        $req = file_get_contents('http://photoshare1418132.azurewebsites.net/api.php?method=getAllImages');
+        $myDecode = json_decode($req, true);
 
-    var_dump($myDecode[$position][$field]);
+        var_dump($myDecode[$position][$field]);
+    }else{
+        $req = file_get_contents('http://photoshare1418132.azurewebsites.net/api.php?method=getAllImages');
+        $myDecode = json_decode($req, true);
+        foreach (one as $myDecode){
+            echo one;
+        }
+    }
 }
 
 function getAllUsersObj()
