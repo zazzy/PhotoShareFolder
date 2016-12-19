@@ -19,7 +19,8 @@ function getAllUsers()
     }
     $myJson = json_encode($users, JSON_PRETTY_PRINT);
     echo $myJson;
-    $myDecode = json_decode($myJson);
+    $myDecode = json_decode($myJson,true);
+    echo $myDecode->{'name'};
     echo $myDecode->{'name'};
     echo'test';
 
@@ -35,8 +36,11 @@ function getAUser()
     while ($row = mysqli_fetch_assoc($user_sql)) {
         $users[] = $row;
     }
-    echo json_encode($users, JSON_PRETTY_PRINT);
-
+    $myJson = json_encode($users, JSON_PRETTY_PRINT);
+    echo $myJson;
+    $myDecode = json_decode($myJson,true);
+    echo $myDecode->{'name'};
+    echo'test';
 }
 
 function getAllImages()
