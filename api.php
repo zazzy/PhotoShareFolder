@@ -56,7 +56,7 @@ function parseJsonAllImages(){
 
         var_dump($myDecode[$position][$field]);
     }else{
-        echo "Test2";
+        echo "Test3";
         $req = file_get_contents('http://photoshare1418132.azurewebsites.net/api.php?method=getAllImages');
         $myDecode = json_decode($req, true);
         $i = 0;
