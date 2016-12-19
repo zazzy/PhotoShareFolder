@@ -17,8 +17,10 @@ function getAllUsers()
     while ($row = mysqli_fetch_assoc($user_sql)) {
         $users[] = $row;
     }
-
-    echo json_encode($users, JSON_PRETTY_PRINT);
+    $myJson = json_encode($users, JSON_PRETTY_PRINT);
+    echo $myJson;
+    $myDecode = json_decode($myJson);
+    console.log($myDecode->{'name'});
 
 }
 
