@@ -21,7 +21,7 @@ function getAllUsers()
     echo $myJson;
     $myDecode = json_decode($myJson,true);
     echo $myDecode->{'name'};
-    echo $myDecode->{'name'};
+    echo $myDecode['name'];
     echo'test';
 
 }
