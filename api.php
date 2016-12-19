@@ -61,7 +61,7 @@ function parseJsonAllImages(){
         $myDecode = json_decode($req, true);
         $i = 0;
         foreach ($myDecode as $one){
-            echo $one[0]['Description'];
+            echo $one['Description'];
             $i++;
         }
     }
