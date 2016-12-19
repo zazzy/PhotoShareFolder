@@ -28,27 +28,10 @@ function parseJsonAllUsers(){
     $field =$_GET['field'];
     $req = file_get_contents('http://photoshare1418132.azurewebsites.net/api.php?method=getAllusers');
     $myDecode = json_decode($req,true);
-    echo $position;
-    echo $field;
+
     var_dump($myDecode[$position][$field]);
 }
 
-function getAUser()
-{
-    $UN = $_GET['user'];
-    global $db;
-    $user_sql = mysqli_query($db, "select name,role,id from USER where name ='$UN'");
-    $users = array();
-
-    while ($row = mysqli_fetch_assoc($user_sql)) {
-        $users[] = $row;
-    }
-    $myJson = json_encode($users, JSON_PRETTY_PRINT);
-    echo $myJson;
-    $myDecode = json_decode($myJson,true);
-    echo $myDecode->{'name'};
-    echo'test';
-}
 
 function getAllImages()
 {
@@ -61,6 +44,15 @@ function getAllImages()
     }
     echo json_encode($users, JSON_PRETTY_PRINT);
 
+}
+
+function parseJsonAllImages(){
+    $position =$_GET['position'];
+    $field =$_GET['field'];
+    $req = file_get_contents('http://photoshare1418132.azurewebsites.net/api.php?method=getAllImages');
+    $myDecode = json_decode($req,true);
+
+    var_dump($myDecode[$position][$field]);
 }
 
 function getAllUsersObj()
@@ -77,19 +69,15 @@ function getAllUsersObj()
 
 }
 
-function getAUserObj()
-{
-    $UN = $_GET['user'];
-    global $db;
-    $user_sql = mysqli_query($db, "select name,role,id from USER where name ='$UN'");
-    $users = array();
+function parseJsonAllImagesObj(){
+    $position =$_GET['position'];
+    $field =$_GET['field'];
+    $req = file_get_contents('http://photoshare1418132.azurewebsites.net/api.php?method=getAllImagesObj');
+    $myDecode = json_decode($req,true);
 
-    while ($row = mysqli_fetch_assoc($user_sql)) {
-        $users[] = $row;
-    }
-    echo json_encode($users, JSON_FORCE_OBJECT);
-
+    var_dump($myDecode[$position][$field]);
 }
+
 
 function getAllImagesObj()
 {
@@ -104,29 +92,5 @@ function getAllImagesObj()
 
 }
 
-function getAImage()
-{
-    $UN = $_GET['img'];
-    global $db;
-    $user_sql = mysqli_query($db, "select user_id,file_name,Description,price from image where file_name ='$UN'");
-    $users = array();
-
-    while ($row = mysqli_fetch_assoc($user_sql)) {
-        $users[] = $row;
-    }
-    echo json_encode($users, JSON_PRETTY_PRINT);
-}
-function getAImageObj()
-{
-    $UN = $_GET['img'];
-    global $db;
-    $user_sql = mysqli_query($db, "select user_id,file_name,Description,price from image where file_name ='$UN'");
-    $users = array();
-
-    while ($row = mysqli_fetch_assoc($user_sql)) {
-        $users[] = $row;
-    }
-    echo json_encode($users, JSON_FORCE_OBJECT);
-}
 ?>
 
