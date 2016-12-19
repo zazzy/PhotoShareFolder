@@ -92,5 +92,15 @@ function getAllImagesObj()
 
 }
 
+
+function parseJsonAllUsersObj(){
+    $position =$_GET['position'];
+    $field =$_GET['field'];
+    $req = file_get_contents('http://photoshare1418132.azurewebsites.net/api.php?method=getAllUsersObj');
+    $myDecode = json_decode($req,true);
+
+    var_dump($myDecode[$position][$field]);
+}
+
 ?>
 
